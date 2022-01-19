@@ -12,6 +12,7 @@
 		516D0C8A27983A8300D7B936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516D0C8927983A8300D7B936 /* Assets.xcassets */; };
 		516D0C8D27983A8300D7B936 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516D0C8C27983A8300D7B936 /* Preview Assets.xcassets */; };
 		516D0C9427983D0500D7B936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516D0C9327983D0500D7B936 /* LaunchScreen.storyboard */; };
+		516D0C96279878F500D7B936 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C95279878F500D7B936 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		516D0C8927983A8300D7B936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		516D0C8C27983A8300D7B936 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		516D0C9327983D0500D7B936 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		516D0C95279878F500D7B936 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				516D0C8527983A8200D7B936 /* CommunitiesApp.swift */,
 				516D0C8727983A8200D7B936 /* ContentView.swift */,
+				516D0C95279878F500D7B936 /* SwiftUIView.swift */,
 				516D0C9327983D0500D7B936 /* LaunchScreen.storyboard */,
 				516D0C8927983A8300D7B936 /* Assets.xcassets */,
 				516D0C8B27983A8300D7B936 /* Preview Content */,
@@ -143,6 +146,7 @@
 			files = (
 				516D0C8827983A8200D7B936 /* ContentView.swift in Sources */,
 				516D0C8627983A8200D7B936 /* CommunitiesApp.swift in Sources */,
+				516D0C96279878F500D7B936 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
