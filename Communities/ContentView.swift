@@ -60,8 +60,8 @@ struct ContentView: View {
             })
             .tag(Tabs.Explore)
             
-
-        Search()
+            SearchView()
+//        Search()
                 .tabItem({
                 Image(systemName: "magnifyingglass")
                 Text("Search")
