@@ -15,12 +15,12 @@ enum Tabs : String{
 }
 struct ContentView: View {
     @Environment (\.presentationMode) var presentationMode
-       @State private var isSheetShown: Bool = false
+//       @State private var isSheetShown: Bool = false
         //isFirstLaunch will default to true until it is set to false in the sheet and
        //then stored in UserDefaults
     @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
     @State var selectedTab : Tabs = .communities
-    var OpstionaText : String? = "Today"
+   
     var body: some View {
 //        VStack {
 //                  Text("Welcome")
@@ -31,7 +31,8 @@ struct ContentView: View {
         TabView(selection: $selectedTab){
             
             NavigationView{
-                 Text("Communities page")
+                GestCommunities()
+//                 Text("Communities page")
                 // assign the title for today in Navigation View
                         .navigationTitle(selectedTab.rawValue.capitalized)
                         .navigationBarTitleDisplayMode(.large)
@@ -39,7 +40,7 @@ struct ContentView: View {
                             Image(systemName: "person.circle.fill")
                                 .resizable()
                             .frame(width: 35.0, height: 35.0)
-                                .offset(x: 90, y: -345)
+                             .offset(x: 0, y: -300)
                                 .foregroundColor(Color.accentColor)
                         , alignment: .topTrailing)
             }.tabItem({
@@ -59,13 +60,9 @@ struct ContentView: View {
             })
             .tag(Tabs.Explore)
             
-            
-            NavigationView{
-                 Text("Search page")
-                // assign the title for today in Navigation View
-                        .navigationTitle(selectedTab.rawValue.capitalized)
-                        .navigationBarTitleDisplayMode(.large)
-            }.tabItem({
+
+        Search()
+                .tabItem({
                 Image(systemName: "magnifyingglass")
                 Text("Search")
             })

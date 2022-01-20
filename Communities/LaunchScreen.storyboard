@@ -56,7 +56,7 @@
     <resources>
         <image name="circle.hexagongrid" catalog="system" width="128" height="112"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.54117647059999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.54100000858306885" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
