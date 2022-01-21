@@ -8,25 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		516D0C8627983A8200D7B936 /* CommunitiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C8527983A8200D7B936 /* CommunitiesApp.swift */; };
-		516D0C8827983A8200D7B936 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C8727983A8200D7B936 /* ContentView.swift */; };
+		516D0C8827983A8200D7B936 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C8727983A8200D7B936 /* TabBarView.swift */; };
 		516D0C8A27983A8300D7B936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516D0C8927983A8300D7B936 /* Assets.xcassets */; };
 		516D0C8D27983A8300D7B936 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516D0C8C27983A8300D7B936 /* Preview Assets.xcassets */; };
 		516D0C9427983D0500D7B936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516D0C9327983D0500D7B936 /* LaunchScreen.storyboard */; };
 		516D0C96279878F500D7B936 /* GestCommunities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C95279878F500D7B936 /* GestCommunities.swift */; };
 		516D0C9A2799CBC300D7B936 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C992799CBC300D7B936 /* SampleData.swift */; };
 		516D0C9C2799D51B00D7B936 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C9B2799D51B00D7B936 /* SearchView.swift */; };
+		516D0C9E2799FA9200D7B936 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C9D2799FA9200D7B936 /* UserProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		516D0C8227983A8200D7B936 /* Zumra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zumra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		516D0C8527983A8200D7B936 /* CommunitiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesApp.swift; sourceTree = "<group>"; };
-		516D0C8727983A8200D7B936 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		516D0C8727983A8200D7B936 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		516D0C8927983A8300D7B936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		516D0C8C27983A8300D7B936 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		516D0C9327983D0500D7B936 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		516D0C95279878F500D7B936 /* GestCommunities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestCommunities.swift; sourceTree = "<group>"; };
 		516D0C992799CBC300D7B936 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		516D0C9B2799D51B00D7B936 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		516D0C9D2799FA9200D7B936 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				516D0C8527983A8200D7B936 /* CommunitiesApp.swift */,
-				516D0C8727983A8200D7B936 /* ContentView.swift */,
+				516D0C8727983A8200D7B936 /* TabBarView.swift */,
 				516D0C95279878F500D7B936 /* GestCommunities.swift */,
 				516D0C9B2799D51B00D7B936 /* SearchView.swift */,
+				516D0C9D2799FA9200D7B936 /* UserProfileView.swift */,
 				516D0C9327983D0500D7B936 /* LaunchScreen.storyboard */,
 				516D0C8927983A8300D7B936 /* Assets.xcassets */,
 				516D0C8B27983A8300D7B936 /* Preview Content */,
@@ -150,7 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				516D0C8827983A8200D7B936 /* ContentView.swift in Sources */,
+				516D0C8827983A8200D7B936 /* TabBarView.swift in Sources */,
+				516D0C9E2799FA9200D7B936 /* UserProfileView.swift in Sources */,
 				516D0C8627983A8200D7B936 /* CommunitiesApp.swift in Sources */,
 				516D0C9A2799CBC300D7B936 /* SampleData.swift in Sources */,
 				516D0C9C2799D51B00D7B936 /* SearchView.swift in Sources */,

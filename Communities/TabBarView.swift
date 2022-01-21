@@ -13,7 +13,7 @@ enum Tabs : String{
     case search
     
 }
-struct ContentView: View {
+struct TabBarView: View {
     @Environment (\.presentationMode) var presentationMode
 //       @State private var isSheetShown: Bool = false
         //isFirstLaunch will default to true until it is set to false in the sheet and
@@ -29,21 +29,8 @@ struct ContentView: View {
 //            Text("is first launch? \(isFirstLaunch ? "YES" : "NO")")
 //        }
         TabView(selection: $selectedTab){
-            
-            NavigationView{
-                GestCommunities()
-//                 Text("Communities page")
-                // assign the title for today in Navigation View
-                        .navigationTitle(selectedTab.rawValue.capitalized)
-                        .navigationBarTitleDisplayMode(.large)
-                        .overlay(
-                            Image(systemName: "person.circle.fill")
-                                .resizable()
-                            .frame(width: 35.0, height: 35.0)
-                             .offset(x: 0, y: -300)
-                                .foregroundColor(Color.accentColor)
-                        , alignment: .topTrailing)
-            }.tabItem({
+            GestCommunities()
+            .tabItem({
                 Image(systemName: "person.3.fill")
                 Text("Communities")
             })
@@ -61,7 +48,6 @@ struct ContentView: View {
             .tag(Tabs.Explore)
             
             SearchView()
-//        Search()
                 .tabItem({
                 Image(systemName: "magnifyingglass")
                 Text("Search")
@@ -69,7 +55,8 @@ struct ContentView: View {
             .tag(Tabs.search)
             
             
-        }.sheet(isPresented: $isFirstLaunch, content: {
+        }
+        .sheet(isPresented: $isFirstLaunch, content: {
                     VStack {
                         Text("Welcome to zumra")
                             .font(.largeTitle)
@@ -168,6 +155,19 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TabBarView()
     }
 }
+
+//NavigationView{
+//    GestCommunities()
+//            .navigationTitle(selectedTab.rawValue.capitalized)
+//            .navigationBarTitleDisplayMode(.large)
+//            .overlay(
+//                Image(systemName: "person.circle.fill")
+//                    .resizable()
+//                .frame(width: 35.0, height: 35.0)
+//                 .offset(x: 0, y: -300)
+//                    .foregroundColor(Color.accentColor)
+//            , alignment: .topTrailing)
+//}
