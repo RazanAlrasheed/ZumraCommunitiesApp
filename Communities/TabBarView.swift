@@ -37,10 +37,11 @@ struct TabBarView: View {
             .tag(Tabs.communities)
           
             NavigationView{
-                 Text("Explore page")
+//                 Text("Explore page")
+                UserProfileView()
                 // assign the title for today in Navigation View
-                        .navigationTitle(selectedTab.rawValue.capitalized)
-                        .navigationBarTitleDisplayMode(.large)
+//                        .navigationTitle(selectedTab.rawValue.capitalized)
+//                        .navigationBarTitleDisplayMode(.large)
             }.tabItem({
                 Image(systemName: "safari.fill")
                 Text("Explore")
