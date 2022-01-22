@@ -10,15 +10,16 @@ import SwiftUI
 struct SearchView: View {
     private var listOfCategories = CategoriesList
      @State var SearchText : String = ""
-    var columns = Array(repeating: GridItem(.fixed(165)), count: 2)
+    var columns = Array(repeating: GridItem(.fixed(175)), count: 2)
     
     var body: some View {
         NavigationView{
             ScrollView(.vertical,showsIndicators: false){
+                Divider().padding(.horizontal)
                  Text("Browse Categories")
                     .font(.title2)
                     .fontWeight(.semibold)
-                    .frame(width: 340, alignment: .leading)
+                    .frame(width: 355, alignment: .leading)
                 LazyVGrid(columns: columns){
                     ForEach(Categories ,id: \.self){ index in
                         NavigationLink(
@@ -26,7 +27,7 @@ struct SearchView: View {
                                 ZStack(alignment: .bottom){
                                     Image("\(index)")
                                          .resizable()
-                                         .frame(width: 170, height: 150)
+                                         .frame(width: 184, height: 150)
                                     VStack(alignment:.leading){
                                            Text("\(index)")
                                                 .font(.title3)
@@ -34,7 +35,7 @@ struct SearchView: View {
                                                 .foregroundColor(.white)
                                         }
                                          .padding(.all)
-                                         .frame(width: 160 , alignment:.bottomLeading)
+                                         .frame(width: 175 , alignment:.bottomLeading)
                             }
                             
                         }

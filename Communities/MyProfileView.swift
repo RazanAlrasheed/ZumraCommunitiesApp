@@ -66,7 +66,7 @@ struct MyProfileView: View {
                                                Text("Joined on June 2022")
                                            }
                                                NavigationLink(
-                                                   destination: Text("Edit profile")){
+                                                   destination: EditMyProfileView()){
                                                       
                                                            Text("Edit profile")
                                                                .fontWeight(.bold)

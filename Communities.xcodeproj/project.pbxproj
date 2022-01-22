@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51563366279C355500A87C33 /* EditMyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51563365279C355500A87C33 /* EditMyProfileView.swift */; };
 		516D0C8627983A8200D7B936 /* CommunitiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C8527983A8200D7B936 /* CommunitiesApp.swift */; };
 		516D0C8827983A8200D7B936 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C8727983A8200D7B936 /* TabBarView.swift */; };
 		516D0C8A27983A8300D7B936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516D0C8927983A8300D7B936 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51563365279C355500A87C33 /* EditMyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyProfileView.swift; sourceTree = "<group>"; };
 		516D0C8227983A8200D7B936 /* Zumra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zumra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		516D0C8527983A8200D7B936 /* CommunitiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesApp.swift; sourceTree = "<group>"; };
 		516D0C8727983A8200D7B936 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				516D0C9B2799D51B00D7B936 /* SearchView.swift */,
 				516D0C9D2799FA9200D7B936 /* UserProfileView.swift */,
 				516D0C9F279BF6E700D7B936 /* MyProfileView.swift */,
+				51563365279C355500A87C33 /* EditMyProfileView.swift */,
 				516D0C9327983D0500D7B936 /* LaunchScreen.storyboard */,
 				516D0C8927983A8300D7B936 /* Assets.xcassets */,
 				516D0C8B27983A8300D7B936 /* Preview Content */,
@@ -158,6 +161,7 @@
 			files = (
 				516D0C8827983A8200D7B936 /* TabBarView.swift in Sources */,
 				516D0C9E2799FA9200D7B936 /* UserProfileView.swift in Sources */,
+				51563366279C355500A87C33 /* EditMyProfileView.swift in Sources */,
 				516D0C8627983A8200D7B936 /* CommunitiesApp.swift in Sources */,
 				516D0C9A2799CBC300D7B936 /* SampleData.swift in Sources */,
 				516D0CA0279BF6E700D7B936 /* MyProfileView.swift in Sources */,
@@ -307,6 +311,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Razan.BinRashed.Communities;
 				PRODUCT_NAME = Zumra;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -337,6 +342,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Razan.BinRashed.Communities;
 				PRODUCT_NAME = Zumra;
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GestCommunities: View {
+
     @State var ProfileIsOpen : Bool = false
     var body: some View {
         ScrollView{
