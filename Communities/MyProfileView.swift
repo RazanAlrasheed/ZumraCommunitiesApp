@@ -1,27 +1,28 @@
 //
-//  UserProfileView.swift
+//  MyProfileView.swift
 //  Zumra
 //
-//  Created by Razan bin rashed on 17/06/1443 AH.
+//  Created by Razan bin rashed on 19/06/1443 AH.
 //
 
 import SwiftUI
 
-struct UserProfileView: View {
+struct MyProfileView: View {
+    @State private var selectedSection = 0
     init() {
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.accentColor)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
     }
-    @State private var selectedSection = 0
     var body: some View {
+        NavigationView{
         ScrollView {
                     ZStack {
 //                        // Bottom Layer
                         VStack {
                             Picker("", selection: $selectedSection) {
-                                        Text("Posts").tag(0)
-                                        Text("Communities").tag(1)
+                                        Text("My Posts").tag(0)
+                                        Text("My Communities").tag(1)
                                     
                                     }
                             .pickerStyle(.segmented)
@@ -65,9 +66,9 @@ struct UserProfileView: View {
                                                Text("Joined on June 2022")
                                            }
                                                NavigationLink(
-                                                   destination: Text("message")){
+                                                   destination: Text("Edit profile")){
                                                       
-                                                           Text("Message")
+                                                           Text("Edit profile")
                                                                .fontWeight(.bold)
                                                                .frame(width: 172, height: 40, alignment: .center)
                                                                .foregroundColor(Color.white)
@@ -83,19 +84,17 @@ struct UserProfileView: View {
                                     
                                    }
                     }
-        }.navigationTitle("profile")
+        }
+        .navigationTitle("My profile")
         .navigationBarTitleDisplayMode(.inline)
         .edgesIgnoringSafeArea(.vertical)
+        }
     }
 }
 
-struct UserProfileView_Previews: PreviewProvider {
+struct MyProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        UserProfileView()
+        MyProfileView()
     }
 }
-extension View{
-    func getReact()->CGRect{
-        return UIScreen.main.bounds
-    }
-}
+

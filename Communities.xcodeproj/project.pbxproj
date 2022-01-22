@@ -16,6 +16,7 @@
 		516D0C9A2799CBC300D7B936 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C992799CBC300D7B936 /* SampleData.swift */; };
 		516D0C9C2799D51B00D7B936 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C9B2799D51B00D7B936 /* SearchView.swift */; };
 		516D0C9E2799FA9200D7B936 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C9D2799FA9200D7B936 /* UserProfileView.swift */; };
+		516D0CA0279BF6E700D7B936 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C9F279BF6E700D7B936 /* MyProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		516D0C992799CBC300D7B936 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		516D0C9B2799D51B00D7B936 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		516D0C9D2799FA9200D7B936 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		516D0C9F279BF6E700D7B936 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				516D0C95279878F500D7B936 /* GestCommunities.swift */,
 				516D0C9B2799D51B00D7B936 /* SearchView.swift */,
 				516D0C9D2799FA9200D7B936 /* UserProfileView.swift */,
+				516D0C9F279BF6E700D7B936 /* MyProfileView.swift */,
 				516D0C9327983D0500D7B936 /* LaunchScreen.storyboard */,
 				516D0C8927983A8300D7B936 /* Assets.xcassets */,
 				516D0C8B27983A8300D7B936 /* Preview Content */,
@@ -157,6 +160,7 @@
 				516D0C9E2799FA9200D7B936 /* UserProfileView.swift in Sources */,
 				516D0C8627983A8200D7B936 /* CommunitiesApp.swift in Sources */,
 				516D0C9A2799CBC300D7B936 /* SampleData.swift in Sources */,
+				516D0CA0279BF6E700D7B936 /* MyProfileView.swift in Sources */,
 				516D0C9C2799D51B00D7B936 /* SearchView.swift in Sources */,
 				516D0C96279878F500D7B936 /* GestCommunities.swift in Sources */,
 			);

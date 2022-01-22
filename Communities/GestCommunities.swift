@@ -50,7 +50,7 @@ struct GestCommunities: View {
             }
         }
         .sheet(isPresented: $ProfileIsOpen, content: {
-            UserProfileView()    
+            MyProfileView()    
         })
         }
   }
