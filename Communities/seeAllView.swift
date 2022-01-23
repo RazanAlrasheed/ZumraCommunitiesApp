@@ -19,28 +19,35 @@ struct seeAllView: View {
             ScrollView {
                 LazyVGrid(columns: columns){
                     ForEach(keys.indices) { index in
-                       
-                        VStack(alignment: .leading){
-                            ZStack{
-                                Image("\(values[index])")
-                                    .resizable()
-                                    .frame(width:170 , height:150)
-                                    .cornerRadius(8)
-                                
-                            }
-                            Text("\(values[index])")
-                                .font(.system(size: 16))
-                                .fontWeight(.bold)
-                            
-                            if(title != "Top Search Category"){
-                            Text("\(keys[index])")
-                                .font(.system(size: 16))
-                                .foregroundColor(.gray)
                         
-                             }
+                        NavigationLink(
+                            destination: Text("\(values[index])")){
+                                VStack(alignment: .leading){
+                                    ZStack{
+                                        Image("\(values[index])")
+                                            .resizable()
+                                            .frame(width:170 , height:150)
+                                            .cornerRadius(8)
+                                        
+                                    }
+                                    Text("\(values[index])")
+                                        .font(.system(size: 16))
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.black)
+                                
+                                    if(title != "Top Search Category"){
+                                    Text("\(keys[index])")
+                                        .font(.system(size: 16))
+                                        .foregroundColor(.gray)
+                                
+                                     }
+                                }
+
+                            
                         }
+                        
             
-                    }
+                    
                 }
                 .padding(.top)
                 
@@ -52,7 +59,7 @@ struct seeAllView: View {
     }
     }
 
-
+}
 struct seeAllView_Previews: PreviewProvider {
     static var previews: some View {
         seeAllView( newList: OurPicksList, title: "Our Picks" )

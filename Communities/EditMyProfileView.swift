@@ -11,7 +11,6 @@ struct EditMyProfileView: View {
     @State var Name: String = ""
     @State var UserName: String = ""
     @State var Email: String = ""
-    @State var Bio: String = ""
     @State var Location: String = ""
     var body: some View {
         NavigationView{
@@ -23,12 +22,12 @@ struct EditMyProfileView: View {
                         Image("ProfileImage")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: 176, height: 176)
+                            .frame(width: 150, height: 150)
                             .clipShape(Circle())
                             .overlay(Circle().stroke(Color.white, lineWidth: 5))
                             .padding(.top, -87.0)
                     }
-                    Image(systemName: "plus")
+                    Image(systemName: "camera")
                         .frame(width: 35, height: 35)
                         .background(Color.accentColor)
                         .foregroundColor(Color.white)
@@ -46,9 +45,6 @@ struct EditMyProfileView: View {
                        .textFieldStyle(RoundedBorderTextFieldStyle())
                        .frame(width: 343.0, height: 50, alignment: .leading)
                 
-                TextField("Bio", text: $Bio)
-                       .textFieldStyle(RoundedBorderTextFieldStyle())
-                       .frame(width: 343.0, height: 50, alignment: .leading)
                 TextField("Location", text: $Location)
                        .textFieldStyle(RoundedBorderTextFieldStyle())
                        .frame(width: 343.0, height: 50, alignment: .leading)

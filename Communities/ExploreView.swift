@@ -101,39 +101,43 @@ struct ourPicksComponent : View {
                     .frame(width:20)
                 
                 ForEach(keys.indices) { index in
+                    NavigationLink(
+                        destination: Text("\(values[index])")){
+                            ZStack(alignment: .bottom){
 
-                    ZStack(alignment: .bottom){
-
-                        Image("\(values[index])")
-                            .resizable()
-                            .frame(width:309 , height:170)
-                            .cornerRadius(8)
-
-
-                        Rectangle()
-                            .frame(width:276 , height:49 )
-                            .foregroundColor(.black)
-                            .opacity(0.5)
-                            .blur(radius: 20.0)
+                                Image("\(values[index])")
+                                    .resizable()
+                                    .frame(width:309 , height:170)
+                                    .cornerRadius(8)
 
 
-                        VStack(alignment:.leading){
-                            Text("\(values[index])")
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
+                                Rectangle()
+                                    .frame(width:276 , height:49 )
+                                    .foregroundColor(.black)
+                                    .opacity(0.5)
+                                    .blur(radius: 20.0)
 
 
-
-                            Text(keys[index])
-                                .foregroundColor(Color(hue: 1.0, saturation: 0.011, brightness: 0.851, opacity: 100.0))
-
-                        }
-                        .padding([.leading, .bottom], 10.0)
-                        .font(.system(size: 16))
-                        .frame(width: 309, alignment: .leading)
+                                VStack(alignment:.leading){
+                                    Text("\(values[index])")
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.white)
 
 
 
+                                    Text(keys[index])
+                                        .foregroundColor(Color(hue: 1.0, saturation: 0.011, brightness: 0.851, opacity: 100.0))
+
+                                }
+                                .padding([.leading, .bottom], 10.0)
+                                .font(.system(size: 16))
+                                .frame(width: 309, alignment: .leading)
+
+
+
+                            }
+
+                        
                     }
 
                 }
@@ -162,35 +166,37 @@ struct latestCommunitiesComponent : View {
                 
                 
                 ForEach(keys.indices) { index in
-              
+                    NavigationLink(
+                        destination: Text("\(values[index])")){
+                            VStack(alignment: .leading){
+                                ZStack{
+                                    Image("\(values[index])")
+                                        .resizable()
+                                        .frame(width:200 , height:200)
+                                        .cornerRadius(8)
+                                    
+                                }
+                                Text("\(values[index])")
+                                    .font(.system(size: 16))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                
+                                
+                                Text("\(keys[index])")
+                                    .font(.system(size: 16))
+                                    .foregroundColor(.gray)
+                            }
+                         
+                            
+                            Spacer()
+                                .frame(width:16)
                 
-                VStack(alignment: .leading){
-                    ZStack{
-                        Image("\(values[index])")
-                            .resizable()
-                            .frame(width:200 , height:200)
-                            .cornerRadius(8)
-                        
-                    }
-                    Text("\(values[index])")
-                        .font(.system(size: 16))
-                        .fontWeight(.bold)
-                    
-                    
-                    Text("\(keys[index])")
-                        .font(.system(size: 16))
-                        .foregroundColor(.gray)
-                }
-             
-                
-                Spacer()
-                    .frame(width:16)
             } }
         }
         
     }
 }
-
+}
 struct topSearchCategoryComponent : View {
  //   let index = TopCategory.map{$0}
     let keys = TopCategory.map{$0.key}

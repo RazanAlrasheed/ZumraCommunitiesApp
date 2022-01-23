@@ -22,7 +22,7 @@ struct MyProfileView: View {
                         VStack {
                             Picker("", selection: $selectedSection) {
                                         Text("My Posts").tag(0)
-                                        Text("My Communities").tag(1)
+                                        Text("Saved Posts").tag(1)
                                     
                                     }
                             .pickerStyle(.segmented)
@@ -32,7 +32,7 @@ struct MyProfileView: View {
                                           } else if selectedSection == 1 {
                                             Text("Communities")
                                           }
-                    }.padding(.top, 490)
+                    }.padding(.top, 450)
 
                         // Top Layer (Header)
                                    GeometryReader { gr in
@@ -45,10 +45,10 @@ struct MyProfileView: View {
                                            Image("ProfileImage")
                                                .resizable()
                                                .aspectRatio(contentMode: .fill)
-                                               .frame(width: 176, height: 176)
+                                               .frame(width: 150, height: 150)
                                                .clipShape(Circle())
                                                .overlay(Circle().stroke(Color.white, lineWidth: 5))
-                                               .padding(.top, -87.0)
+                                               .padding(.top, -110.0)
                                            Text("Nora Salem")
                                                .font(.title)
                                                .foregroundColor(Color.black)
@@ -57,14 +57,20 @@ struct MyProfileView: View {
                                                .font(.subheadline)
                                                .fontWeight(.regular)
                                                .foregroundColor(Color.gray)
-                                           HStack{
-                                               Image(systemName: "mappin.and.ellipse")
-                                               Text("Saudi Arabia, Riyadh")
-                                           }.padding(.top, 5.0)
-                                           HStack{
-                                               Image(systemName: "clock")
-                                               Text("Joined on June 2022")
-                                           }
+                                           HStack(spacing: 5.0){
+                                               VStack (spacing: 5){
+                                                   Image(systemName: "mappin.and.ellipse")
+                                                   Image(systemName: "clock")
+                                                   
+                                               }
+                                               .foregroundColor(Color.gray)
+                                            
+                                               VStack (spacing: 5){
+                                                   Text("Saudi Arabia, Riyadh")
+                                                   Text("Joined on June 2022")
+                                               }
+        
+                                           }.padding(.vertical, 5.0)
                                                NavigationLink(
                                                    destination: EditMyProfileView()){
                                                       
@@ -76,7 +82,8 @@ struct MyProfileView: View {
                                                                .cornerRadius(10)
                                                        
                                                
-                                           }
+                                           }.padding(.top, 10)
+
                                            Spacer() // Push header to top
            
                                        }

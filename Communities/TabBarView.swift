@@ -29,7 +29,8 @@ struct TabBarView: View {
 //            Text("is first launch? \(isFirstLaunch ? "YES" : "NO")")
 //        }
         TabView(selection: $selectedTab){
-            GestCommunities()
+//            GestCommunities()
+            UserProfileView()
             .tabItem({
                 Image(systemName: "person.3.fill")
                 Text("Communities")
