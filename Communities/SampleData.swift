@@ -23,3 +23,39 @@ public var CategoriesList = [
     "Education"
 ]
 
+public var OurPicksList = [
+
+    "Travel" : "Travel Community" ,
+    "Technology" : "We Byte!",
+    "Food" : "Cook and Cookers"
+
+]
+
+public var LatestCommunitiesList = [
+
+    "Travel" : "Riyadh City" ,
+    "Art" : "Painting Club!",
+    "Music" : "Swifties" ,
+    "Fitness" : "Fab & Fit & Fun" ,
+    "Technology" : "App Monsters",
+    "Craft" : "Paper Crafters"
+
+]
+
+public var TopCommunitiesList = [
+
+    "Book" : "OverBooked!" ,
+    "TV & Films" : "Squad Game Club",
+    "TV & Films " : "The Alliance" ,
+    "Fitness" : "Fab & Fit & Fun" ,
+    "Game" : "OverWatch",
+    "Game " : "Crafters"
+
+]
+
+public var TopCategory = [
+    "TV & Film":"TV & Film",
+    "Games":"Games",
+     "Sport":"Sport",
+      "Art":"Art"
+]

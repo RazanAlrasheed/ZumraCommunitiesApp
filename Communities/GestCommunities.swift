@@ -27,7 +27,7 @@ struct GestCommunities: View {
                         
                     }
                 }.padding()
-                
+                Divider().padding(.horizontal)
                 VStack{
                     Text("Looking for communities?")
                         .font(.title2)
@@ -35,18 +35,12 @@ struct GestCommunities: View {
                         .padding(.bottom, 2.0)
                 
                     Text("The communities you join will apear here.")
-                        .font(.body)
+                        .font(.headline)
                         .foregroundColor(Color.gray)
+                        .multilineTextAlignment(.center)
                         .padding(.bottom, 2.0)
                         .frame(width:300)
-                
-                    NavigationLink(
-                        destination: Text("exploar")){
-                            Text("Explore communities")
-                                .underline()
-                                .foregroundColor(Color("AccentColor"))
-                
-                    }
+                    
                 }.frame(height: 300, alignment: .bottom)
             }
         }
