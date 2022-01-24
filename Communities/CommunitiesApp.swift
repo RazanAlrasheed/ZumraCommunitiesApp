@@ -7,11 +7,20 @@
 
 import SwiftUI
 
+class User : ObservableObject {
+    @Published var IsLogin : Bool
+    init(IsLogin : Bool){
+        self.IsLogin = IsLogin
+    }
+}
 @main
 struct CommunitiesApp: App {
+    @StateObject var user = User(IsLogin: false)
+  
     var body: some Scene {
         WindowGroup {
             TabBarView()
+                .environmentObject(user)
         }
     }
 }
