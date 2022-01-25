@@ -129,7 +129,7 @@ struct CommunityPageGuest: View {
                 }
             }.navigationBarTitle("\(TitleName)",displayMode: .inline)
             
-        }   .alert("Important message", isPresented: $isGuest) {
+        }   .alert("You’re not Logged in", isPresented: $isGuest) {
             Button("Log in") {
             }
             Button("Sign up") {
@@ -307,7 +307,7 @@ struct postsStructureGuest : View{
                         .frame(width: 20, height: 19)
                         .foregroundColor(.gray)
                     
-                }) .sheet(isPresented: $showCommentsSheet, content: {CommentsView()})
+                }) .sheet(isPresented: $showCommentsSheet, content: {CommentsViewGuest()})
                 
                 
                 Text("2")
@@ -327,12 +327,12 @@ struct postsStructureGuest : View{
             
             
         }
-        .alert("Important message", isPresented: $isGuest) {
-            Button("Log in") {
-            }
-            Button("Sign up") {
-            }
-            Button("Cancle", role: .cancel) { }
+        .alert("You’re not Logged in", isPresented: $isGuest) {
+           Button("Log in") {
+           }
+           Button("Sign up") {
+           }
+           Button("Cancle", role: .cancel) { }
             
     
             }

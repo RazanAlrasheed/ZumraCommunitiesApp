@@ -44,12 +44,12 @@ struct GestCommunities: View {
                 }.frame(height: 300, alignment: .bottom)
             }
         }
-        .alert("Important message", isPresented: $ProfileIsOpen) {
-            Button("Log in") {
-            }
-            Button("Sign up") {
-            }
-            Button("Cancle", role: .cancel) { }
+        .alert("You’re not Logged in", isPresented: $ProfileIsOpen) {
+           Button("Log in") {
+           }
+           Button("Sign up") {
+           }
+           Button("Cancle", role: .cancel) { }
             
     
             }

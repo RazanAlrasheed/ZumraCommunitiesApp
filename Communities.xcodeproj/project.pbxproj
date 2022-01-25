@@ -17,6 +17,7 @@
 		5156336A279D617C00A87C33 /* seeAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51563369279D617C00A87C33 /* seeAllView.swift */; };
 		5156336E279EE1A700A87C33 /* CommunitiesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5156336D279EE1A700A87C33 /* CommunitiesUIView.swift */; };
 		515EB58727A03A7C0066B1E6 /* CommunityPageGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EB58627A03A7C0066B1E6 /* CommunityPageGuest.swift */; };
+		515EB58927A0423B0066B1E6 /* CommentsViewGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EB58827A0423B0066B1E6 /* CommentsViewGuest.swift */; };
 		516D0C8627983A8200D7B936 /* CommunitiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C8527983A8200D7B936 /* CommunitiesApp.swift */; };
 		516D0C8827983A8200D7B936 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C8727983A8200D7B936 /* TabBarView.swift */; };
 		516D0C8A27983A8300D7B936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516D0C8927983A8300D7B936 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		51563369279D617C00A87C33 /* seeAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seeAllView.swift; sourceTree = "<group>"; };
 		5156336D279EE1A700A87C33 /* CommunitiesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesUIView.swift; sourceTree = "<group>"; };
 		515EB58627A03A7C0066B1E6 /* CommunityPageGuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPageGuest.swift; sourceTree = "<group>"; };
+		515EB58827A0423B0066B1E6 /* CommentsViewGuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewGuest.swift; sourceTree = "<group>"; };
 		516D0C8227983A8200D7B936 /* Zumra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zumra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		516D0C8527983A8200D7B936 /* CommunitiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesApp.swift; sourceTree = "<group>"; };
 		516D0C8727983A8200D7B936 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		515EB58A27A045F80066B1E6 /* GuestUser */ = {
+			isa = PBXGroup;
+			children = (
+				516D0C95279878F500D7B936 /* GestCommunities.swift */,
+				515EB58627A03A7C0066B1E6 /* CommunityPageGuest.swift */,
+				515EB58827A0423B0066B1E6 /* CommentsViewGuest.swift */,
+			);
+			path = GuestUser;
+			sourceTree = "<group>";
+		};
+		515EB58B27A046090066B1E6 /* LoginUser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginUser;
+			sourceTree = "<group>";
+		};
 		516D0C7927983A8200D7B936 = {
 			isa = PBXGroup;
 			children = (
@@ -83,9 +102,10 @@
 		516D0C8427983A8200D7B936 /* Communities */ = {
 			isa = PBXGroup;
 			children = (
+				515EB58B27A046090066B1E6 /* LoginUser */,
+				515EB58A27A045F80066B1E6 /* GuestUser */,
 				516D0C8527983A8200D7B936 /* CommunitiesApp.swift */,
 				516D0C8727983A8200D7B936 /* TabBarView.swift */,
-				516D0C95279878F500D7B936 /* GestCommunities.swift */,
 				5156336D279EE1A700A87C33 /* CommunitiesUIView.swift */,
 				51563367279C795B00A87C33 /* ExploreView.swift */,
 				516D0C9B2799D51B00D7B936 /* SearchView.swift */,
@@ -102,7 +122,6 @@
 				512F29AB27A0180C003FD664 /* GridImageView.swift */,
 				512F29AD27A0183B003FD664 /* ImageView.swift */,
 				512F29AF27A01875003FD664 /* ViewModel.swift */,
-				515EB58627A03A7C0066B1E6 /* CommunityPageGuest.swift */,
 			);
 			path = Communities;
 			sourceTree = "<group>";
@@ -195,6 +214,7 @@
 				515EB58727A03A7C0066B1E6 /* CommunityPageGuest.swift in Sources */,
 				512F29B027A01875003FD664 /* ViewModel.swift in Sources */,
 				5156336E279EE1A700A87C33 /* CommunitiesUIView.swift in Sources */,
+				515EB58927A0423B0066B1E6 /* CommentsViewGuest.swift in Sources */,
 				51563366279C355500A87C33 /* EditMyProfileView.swift in Sources */,
 				516D0C8627983A8200D7B936 /* CommunitiesApp.swift in Sources */,
 				516D0C9A2799CBC300D7B936 /* SampleData.swift in Sources */,
