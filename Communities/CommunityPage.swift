@@ -28,7 +28,7 @@ struct CommunityPage: View {
                     Image("\(imageTitle)")
                         .resizable()
                         .frame(width: 390.0, height: 451.0)
-                    VStack(spacing: 15.0){
+                    VStack(alignment: .leading, spacing: 15.0){
                         HStack{
                             Text("\(TitleName)")
                                 .font(.title3)
@@ -69,7 +69,7 @@ struct CommunityPage: View {
                             .foregroundColor(Color.white)
                         //                        .multilineTextAlignment(.leading)
                         
-                        HStack(spacing:60){
+                        HStack(spacing:70){
                             Button(action:  {isJoined.toggle()}) {
                                 if isJoined == false{
                                 Image(systemName: "person.crop.circle.badge.plus")
@@ -88,7 +88,7 @@ struct CommunityPage: View {
                                     }
                                     
                                 }
-                            }  .frame(maxWidth: 160, maxHeight: 40)
+                            }  .frame(maxWidth: 170, maxHeight: 40)
                                 .background(
                                     RoundedRectangle(cornerRadius: 10)
                                         .fill(Color("AccentColor"))
@@ -104,7 +104,7 @@ struct CommunityPage: View {
                             }.background(
                                 RoundedRectangle(cornerRadius: 10)
                                     .fill(.white)
-                                    .frame(width: 160.0, height: 40.0))
+                                    .frame(width: 170.0, height: 40.0))
                             
                         }.padding(.trailing, 42.0)
                         
@@ -232,6 +232,7 @@ struct postsStructure : View{
     
     @State var isLiked : Bool = false
     @State var showCommentsSheet : Bool = false
+    @State var isSaved : Bool = false
     var userName : String
     var ImageName : String
     var post : String
@@ -241,7 +242,7 @@ struct postsStructure : View{
     
     var body: some View{
         
-        VStack{
+        VStack(alignment: .leading){
             HStack(alignment: .top){
                 Image(ImageName)
                     .resizable()
@@ -278,8 +279,8 @@ struct postsStructure : View{
                 Image(postImage!)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 334.0, height: 232.0)
-                    .padding(.bottom)
+                    .frame(width: 340, height: 232.0)
+                    .padding(.leading, 23.0)
             }
             
             HStack{
@@ -290,7 +291,12 @@ struct postsStructure : View{
                     if isLiked == false {
                         HStack{
                             Image(systemName: "suit.heart")
-                            .foregroundColor(.black) }
+                                .resizable()
+                                .frame(width: 20, height: 19)
+                            .foregroundColor(.gray)
+                            .font(.body)
+                            
+                        }
                         Text(String(randomInt))
                             .font(.caption)
                             .foregroundColor(Color.gray)
@@ -298,6 +304,8 @@ struct postsStructure : View{
                     else {
                         HStack{
                             Image(systemName: "heart.fill")
+                                .resizable()
+                                .frame(width: 20, height: 19)
                                 .foregroundColor(.red)
                             Text(String(randomInt+1))
                                 .font(.caption)
@@ -310,7 +318,11 @@ struct postsStructure : View{
                 
                 
                 Button(action: {showCommentsSheet.toggle()},label: {Image(systemName: "message")
-                    .foregroundColor(.black) }) .sheet(isPresented: $showCommentsSheet, content: {CommentsView()})
+                        .resizable()
+                        .frame(width: 20, height: 19)
+                        .foregroundColor(.gray)
+                    
+                }) .sheet(isPresented: $showCommentsSheet, content: {CommentsView()})
                     
                 
                 Text("2")
@@ -318,10 +330,19 @@ struct postsStructure : View{
                     .foregroundColor(Color.gray)
                 Spacer()
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Image(systemName: "bookmark")
-                    .foregroundColor(.black) }
-            }.padding(.horizontal)
+                Button(action: {
+                    isSaved.toggle()
+                }){
+                    if(isSaved){
+                    Image(systemName: "bookmark.fill")
+                    .foregroundColor(.black)
+                    }
+                    else {
+                        Image(systemName: "bookmark")
+                        .foregroundColor(.gray)
+                    }
+                    }
+                }.padding()
             
             
         }
