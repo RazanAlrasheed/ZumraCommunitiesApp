@@ -24,9 +24,8 @@ struct TabBarView: View {
    
     var body: some View {
         if (user.IsLogin){
-            
             TabView(selection: $selectedTab){
-            Text("Communities")
+           CommunitiesUIView()
                 .tabItem({
                     Image(systemName: "person.3.fill")
                     Text("Communities")
@@ -178,16 +177,3 @@ struct ContentView_Previews: PreviewProvider {
         TabBarView()
     }
 }
-
-//NavigationView{
-//    GestCommunities()
-//            .navigationTitle(selectedTab.rawValue.capitalized)
-//            .navigationBarTitleDisplayMode(.large)
-//            .overlay(
-//                Image(systemName: "person.circle.fill")
-//                    .resizable()
-//                .frame(width: 35.0, height: 35.0)
-//                 .offset(x: 0, y: -300)
-//                    .foregroundColor(Color.accentColor)
-//            , alignment: .topTrailing)
-//}

@@ -79,6 +79,12 @@ struct titleOf : View {
                         .foregroundColor(Color(UIColor(named:"ourOrange")!))
                         .font(.callout) })
             }
+            else if( title == "My communities" ) {
+                NavigationLink(destination: seeAllView( newList: MyCommunitiesList, title: "My communities" ) , label: {  Text("See All")
+                        .fontWeight(.bold)
+                        .foregroundColor(Color(UIColor(named:"ourOrange")!))
+                        .font(.callout) })
+            }
                        Spacer()
                 .frame(width:20)
         }
@@ -102,7 +108,7 @@ struct ourPicksComponent : View {
                 
                 ForEach(keys.indices) { index in
                     NavigationLink(
-                        destination: Text("\(values[index])")){
+                        destination: CommunityPage(TitleName: "\(values[index])", imageTitle: "\(values[index])")){
                             ZStack(alignment: .bottom){
 
                                 Image("\(values[index])")
@@ -167,7 +173,7 @@ struct latestCommunitiesComponent : View {
                 
                 ForEach(keys.indices) { index in
                     NavigationLink(
-                        destination: Text("\(values[index])")){
+                        destination: CommunityPage(TitleName: "\(values[index])", imageTitle: "\(values[index])")){
                             VStack(alignment: .leading){
                                 ZStack{
                                     Image("\(values[index])")
@@ -340,29 +346,33 @@ struct topSearchCommunitiesComponent : View {
                 
                 ForEach(keys.indices) { index in
               
+                    NavigationLink(
+                        destination: CommunityPage(TitleName: "\(values[index])", imageTitle: "\(values[index])")){
+                            VStack(alignment: .leading){
+                                ZStack{
+                                    Image("\(values[index])")
+                                        .resizable()
+                                        .frame(width:200 , height:200)
+                                        .cornerRadius(8)
+                                    
+                                }
+                                Text("\(values[index])")
+                                    .font(.system(size: 16))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                
+                                
+                                Text("\(keys[index])")
+                                    .font(.system(size: 16))
+                                    .foregroundColor(.gray)
+                            }
+                         
+                            
+                            Spacer()
+                                .frame(width:16)
                 
-                VStack(alignment: .leading){
-                    ZStack{
-                        Image("\(values[index])")
-                            .resizable()
-                            .frame(width:200 , height:200)
-                            .cornerRadius(8)
-                        
-                    }
-                    Text("\(values[index])")
-                        .font(.system(size: 16))
-                        .fontWeight(.bold)
-                    
-                    
-                    Text("\(keys[index])")
-                        .font(.system(size: 16))
-                        .foregroundColor(.gray)
-                }
-             
-                
-                Spacer()
-                    .frame(width:16)
-            } }
+            
+                        }} }
         }
     }
 }

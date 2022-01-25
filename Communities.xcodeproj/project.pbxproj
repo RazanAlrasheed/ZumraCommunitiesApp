@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		512F29A827A017A1003FD664 /* CommunityPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F29A727A017A1003FD664 /* CommunityPage.swift */; };
+		512F29AA27A017E8003FD664 /* CommentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F29A927A017E8003FD664 /* CommentsModel.swift */; };
+		512F29AC27A0180C003FD664 /* GridImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F29AB27A0180C003FD664 /* GridImageView.swift */; };
+		512F29AE27A0183B003FD664 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F29AD27A0183B003FD664 /* ImageView.swift */; };
+		512F29B027A01875003FD664 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F29AF27A01875003FD664 /* ViewModel.swift */; };
 		51563366279C355500A87C33 /* EditMyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51563365279C355500A87C33 /* EditMyProfileView.swift */; };
 		51563368279C795B00A87C33 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51563367279C795B00A87C33 /* ExploreView.swift */; };
 		5156336A279D617C00A87C33 /* seeAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51563369279D617C00A87C33 /* seeAllView.swift */; };
+		5156336E279EE1A700A87C33 /* CommunitiesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5156336D279EE1A700A87C33 /* CommunitiesUIView.swift */; };
 		516D0C8627983A8200D7B936 /* CommunitiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C8527983A8200D7B936 /* CommunitiesApp.swift */; };
 		516D0C8827983A8200D7B936 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C8727983A8200D7B936 /* TabBarView.swift */; };
 		516D0C8A27983A8300D7B936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516D0C8927983A8300D7B936 /* Assets.xcassets */; };
@@ -23,9 +29,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		512F29A727A017A1003FD664 /* CommunityPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPage.swift; sourceTree = "<group>"; };
+		512F29A927A017E8003FD664 /* CommentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsModel.swift; sourceTree = "<group>"; };
+		512F29AB27A0180C003FD664 /* GridImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridImageView.swift; sourceTree = "<group>"; };
+		512F29AD27A0183B003FD664 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		512F29AF27A01875003FD664 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		51563365279C355500A87C33 /* EditMyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyProfileView.swift; sourceTree = "<group>"; };
 		51563367279C795B00A87C33 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		51563369279D617C00A87C33 /* seeAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seeAllView.swift; sourceTree = "<group>"; };
+		5156336D279EE1A700A87C33 /* CommunitiesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesUIView.swift; sourceTree = "<group>"; };
 		516D0C8227983A8200D7B936 /* Zumra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zumra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		516D0C8527983A8200D7B936 /* CommunitiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesApp.swift; sourceTree = "<group>"; };
 		516D0C8727983A8200D7B936 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -72,6 +84,7 @@
 				516D0C8527983A8200D7B936 /* CommunitiesApp.swift */,
 				516D0C8727983A8200D7B936 /* TabBarView.swift */,
 				516D0C95279878F500D7B936 /* GestCommunities.swift */,
+				5156336D279EE1A700A87C33 /* CommunitiesUIView.swift */,
 				51563367279C795B00A87C33 /* ExploreView.swift */,
 				516D0C9B2799D51B00D7B936 /* SearchView.swift */,
 				516D0C9D2799FA9200D7B936 /* UserProfileView.swift */,
@@ -82,6 +95,11 @@
 				516D0C8927983A8300D7B936 /* Assets.xcassets */,
 				516D0C8B27983A8300D7B936 /* Preview Content */,
 				516D0C992799CBC300D7B936 /* SampleData.swift */,
+				512F29A727A017A1003FD664 /* CommunityPage.swift */,
+				512F29A927A017E8003FD664 /* CommentsModel.swift */,
+				512F29AB27A0180C003FD664 /* GridImageView.swift */,
+				512F29AD27A0183B003FD664 /* ImageView.swift */,
+				512F29AF27A01875003FD664 /* ViewModel.swift */,
 			);
 			path = Communities;
 			sourceTree = "<group>";
@@ -165,13 +183,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512F29AE27A0183B003FD664 /* ImageView.swift in Sources */,
+				512F29A827A017A1003FD664 /* CommunityPage.swift in Sources */,
 				516D0C8827983A8200D7B936 /* TabBarView.swift in Sources */,
 				51563368279C795B00A87C33 /* ExploreView.swift in Sources */,
+				512F29AA27A017E8003FD664 /* CommentsModel.swift in Sources */,
 				516D0C9E2799FA9200D7B936 /* UserProfileView.swift in Sources */,
+				512F29B027A01875003FD664 /* ViewModel.swift in Sources */,
+				5156336E279EE1A700A87C33 /* CommunitiesUIView.swift in Sources */,
 				51563366279C355500A87C33 /* EditMyProfileView.swift in Sources */,
 				516D0C8627983A8200D7B936 /* CommunitiesApp.swift in Sources */,
 				516D0C9A2799CBC300D7B936 /* SampleData.swift in Sources */,
 				5156336A279D617C00A87C33 /* seeAllView.swift in Sources */,
+				512F29AC27A0180C003FD664 /* GridImageView.swift in Sources */,
 				516D0CA0279BF6E700D7B936 /* MyProfileView.swift in Sources */,
 				516D0C9C2799D51B00D7B936 /* SearchView.swift in Sources */,
 				516D0C96279878F500D7B936 /* GestCommunities.swift in Sources */,

@@ -20,29 +20,45 @@ struct seeAllView: View {
                 LazyVGrid(columns: columns){
                     ForEach(keys.indices) { index in
                         
-                        NavigationLink(
-                            destination: Text("\(values[index])")){
-                                VStack(alignment: .leading){
-                                    ZStack{
-                                        Image("\(values[index])")
-                                            .resizable()
-                                            .frame(width:170 , height:150)
-                                            .cornerRadius(8)
-                                        
+                        if(title != "Top Search Category"){
+                            NavigationLink(
+                                destination: CommunityPage(TitleName: "\(values[index])", imageTitle: "\(values[index])")){
+                                    VStack(alignment: .leading){
+                                        ZStack{
+                                            Image("\(values[index])")
+                                                .resizable()
+                                                .frame(width:170 , height:150)
+                                                .cornerRadius(8)
+                                            
+                                        }
+                                        Text("\(values[index])")
+                                            .font(.system(size: 16))
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.black)
+                                    
+                                     
+                                        Text("\(keys[index])")
+                                            .font(.system(size: 16))
+                                            .foregroundColor(.gray)
+                                    
+                                         
                                     }
-                                    Text("\(values[index])")
-                                        .font(.system(size: 16))
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.black)
-                                
-                                    if(title != "Top Search Category"){
-                                    Text("\(keys[index])")
-                                        .font(.system(size: 16))
-                                        .foregroundColor(.gray)
-                                
-                                     }
+                             }
+                            
+                        }else {
+                            VStack(alignment: .leading){
+                                ZStack{
+                                    Image("\(values[index])")
+                                        .resizable()
+                                        .frame(width:170 , height:150)
+                                        .cornerRadius(8)
+                                    
                                 }
-
+                                Text("\(values[index])")
+                                    .font(.system(size: 16))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                           }
                             
                         }
                         

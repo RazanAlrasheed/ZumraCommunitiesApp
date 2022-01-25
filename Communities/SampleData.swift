@@ -59,3 +59,13 @@ public var TopCategory = [
      "Sport":"Sport",
       "Art":"Art"
 ]
+public var MyCommunitiesList = [
+
+    "Travel" : "Riyadh City" ,
+    "TV & Films" : "Squad Game Club",
+    "Technology" : "App Monsters",
+    "Fitness" : "Fab & Fit & Fun" ,
+    "Game" : "OverWatch",
+    "Food" : "Cook and Cookers"
+
+]

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct GestCommunities: View {
-
     @State var ProfileIsOpen : Bool = false
+    @State private var actionState: Int? = 0
     var body: some View {
         ScrollView{
             VStack{
@@ -44,12 +44,23 @@ struct GestCommunities: View {
                 }.frame(height: 300, alignment: .bottom)
             }
         }
-        .sheet(isPresented: $ProfileIsOpen, content: {
-            MyProfileView()    
-        })
-        }
-  }
+        .alert("Important message", isPresented: $ProfileIsOpen) {
+            Button("Log in") {
+                self.actionState = 1
+            }
+            Button("Sign up") {
+                self.actionState = 2
+            }
+            Button("Cancle", role: .cancel) { }
+            NavigationLink(destination: Text("View to navigate"), tag: 1, selection: self.$actionState) {
 
+                            Text("Whatever you want, if nothing, text or empty view")
+                        }
+    
+            }
+          }
+        }
+  
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
