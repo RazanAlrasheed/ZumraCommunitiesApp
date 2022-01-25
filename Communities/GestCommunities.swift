@@ -46,16 +46,11 @@ struct GestCommunities: View {
         }
         .alert("Important message", isPresented: $ProfileIsOpen) {
             Button("Log in") {
-                self.actionState = 1
             }
             Button("Sign up") {
-                self.actionState = 2
             }
             Button("Cancle", role: .cancel) { }
-            NavigationLink(destination: Text("View to navigate"), tag: 1, selection: self.$actionState) {
-
-                            Text("Whatever you want, if nothing, text or empty view")
-                        }
+            
     
             }
           }

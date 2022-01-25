@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ExploreView: View {
+    @EnvironmentObject var user: User
     var body: some View {
         NavigationView {
             ScrollView {
                 Divider().padding(.horizontal)
-                ourPicksComponent()
+                ourPicksComponent().environmentObject(user)
                 
                 Divider().padding([.top, .leading, .trailing])
 
@@ -94,6 +95,7 @@ struct titleOf : View {
 
 
 struct ourPicksComponent : View {
+    @EnvironmentObject var user: User
     let keys = OurPicksList.map{$0.key}
     let values = OurPicksList.map{$0.value}
     var body: some View {
@@ -108,7 +110,7 @@ struct ourPicksComponent : View {
                 
                 ForEach(keys.indices) { index in
                     NavigationLink(
-                        destination: CommunityPage(TitleName: "\(values[index])", imageTitle: "\(values[index])")){
+                        destination: CommunityPageGuest(TitleName: "\(values[index])", imageTitle: "\(values[index])").environmentObject(user)){
                             ZStack(alignment: .bottom){
 
                                 Image("\(values[index])")

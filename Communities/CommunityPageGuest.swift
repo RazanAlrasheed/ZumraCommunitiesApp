@@ -1,13 +1,13 @@
 //
-//  CommunityPage.swift
-//  Zumra App
+//  CommunityPageGuest.swift
+//  Zumra
 //
-//  Created by Farah Ashraf on 21/01/2022.
+//  Created by Razan bin rashed on 22/06/1443 AH.
 //
 
 import SwiftUI
 
-struct CommunityPage: View {
+struct CommunityPageGuest: View {
     @EnvironmentObject var user: User
     var TitleName : String
     var imageTitle :String
@@ -19,7 +19,7 @@ struct CommunityPage: View {
         self.imageTitle = imageTitle
     }
     @State private var pageMode = 0
-    @State var isJoined : Bool=false
+    @State var isGuest : Bool=false
     
     var body: some View {
         ScrollView(showsIndicators: false){
@@ -43,7 +43,7 @@ struct CommunityPage: View {
                                 .aspectRatio(contentMode: .fit)
                                 .clipShape(Circle())
                                 .frame(width: 45.0, height: 45.0)
-                               
+                            
                                 .overlay(Image("member1")
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
@@ -71,31 +71,22 @@ struct CommunityPage: View {
                         //                        .multilineTextAlignment(.leading)
                         
                         HStack(spacing:70){
-                            Button(action:  {isJoined.toggle()}) {
-                                if isJoined == false{
-                                Image(systemName: "person.crop.circle.badge.plus")
-                                    .foregroundColor(.white)
-                                Text("Join")
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                                }
-                                else{
-                                    HStack(spacing:0){
-                                    Image(systemName: "person.fill.checkmark")
+                            Button(action:  {isGuest.toggle()}) {
+                              
+                                    Image(systemName: "person.crop.circle.badge.plus")
                                         .foregroundColor(.white)
-                                    Text("Joined")
+                                    Text("Join")
                                         .fontWeight(.bold)
                                         .foregroundColor(.white)
-                                    }
-                                    
-                                }
+                            
+                                
                             }  .frame(maxWidth: 170, maxHeight: 40)
                                 .background(
                                     RoundedRectangle(cornerRadius: 10)
                                         .fill(Color("AccentColor"))
-                                       )
+                                )
                             
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                            Button(action: { isGuest.toggle()} ) {
                                 Image(systemName: "link.circle.fill")
                                     .foregroundColor(Color("AccentColor"))
                                 Text("Invite")
@@ -116,14 +107,6 @@ struct CommunityPage: View {
                                 .opacity(0.5)
                                 .blur(radius: 20.0)
                         )
-//                        .background(LinearGradient(gradient: Gradient(colors: [.black, .black]), startPoint: .top, endPoint: .bottom)
-//                                            .opacity(0.2))
-                    
-                    //
-                    
-                    
-                    
-                    
                     
                 }
                 
@@ -138,15 +121,25 @@ struct CommunityPage: View {
                     .padding()
                     
                     switch pageMode {
-                    case 0 : PostsPage()
-                    case 1 : MediaPage()
-                    case 2 : FilesPage()
-                    default:PostsPage()
+                    case 0 : PostsPageGuest()
+                    case 1 : MediaPageGuest()
+                    case 2 : FilesPageGuest()
+                    default:PostsPageGuest()
                     }
                 }
             }.navigationBarTitle("\(TitleName)",displayMode: .inline)
-        }   .overlay(
-            Button(action: {  })
+            
+        }   .alert("Important message", isPresented: $isGuest) {
+            Button("Log in") {
+            }
+            Button("Sign up") {
+            }
+            Button("Cancle", role: .cancel) { }
+            
+    
+            }
+        .overlay(
+            Button(action: { isGuest.toggle() })
             { Image(systemName: "plus")
                     .foregroundColor(.white)
                     .background(Circle()
@@ -156,19 +149,19 @@ struct CommunityPage: View {
             }.padding(), alignment: .bottomTrailing )
     }
     
-    struct PostsPage : View{
+    struct PostsPageGuest : View{
         var body: some View{
-            postsStructure(userName: "Nora Moore", ImageName: "member1", post: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.")
+            postsStructureGuest(userName: "Nora Moore", ImageName: "member1", post: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.")
             Divider().padding()
-            postsStructure(userName: "Alan Dymon", ImageName: "member2", post: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.",postImage: "postimage1")
+            postsStructureGuest(userName: "Alan Dymon", ImageName: "member2", post: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.",postImage: "postimage1")
             Divider().padding()
-            postsStructure(userName: "Sara Smith ", ImageName: "member3", post: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.",postImage: "postimage2")
+            postsStructureGuest(userName: "Sara Smith ", ImageName: "member3", post: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.",postImage: "postimage2")
             
         }
     }
     
     
-    struct MediaPage:View{
+    struct MediaPageGuest:View{
         
         @StateObject var mediaData = ViewModel()
         var body: some View{
@@ -196,7 +189,7 @@ struct CommunityPage: View {
     }
     
     
-    struct FilesPage:View {
+    struct FilesPageGuest:View {
         //        @State var ListOfDates = ["7 May 2021","1 May 2021","7 May 2021","7 May 2021","6 May 2021","6 May 2021","5 May 2021","5 May 2021","5 May 2021","4 May 2021",]
         //        @State var ListOfNames = ["Traveling Rules","A.","Visa Approval","Bali Trip Coast","France","How to save money","AAA","V1"]
         
@@ -221,19 +214,21 @@ struct CommunityPage: View {
         }
     }
 }
-struct CommunityPage_Previews: PreviewProvider {
+struct CommunityPageGuest_Previews: PreviewProvider {
     static var previews: some View {
-        CommunityPage(TitleName: "", imageTitle: "")
-        
+        CommunityPageGuest(TitleName: "", imageTitle: "")
     }
 }
 
 
-struct postsStructure : View{
+
+
+
+struct postsStructureGuest : View{
     
-    @State var isLiked : Bool = false
+    @State var isGuest : Bool = false
     @State var showCommentsSheet : Bool = false
-    @State var isSaved : Bool = false
+  
     var userName : String
     var ImageName : String
     var post : String
@@ -286,33 +281,22 @@ struct postsStructure : View{
             
             HStack{
                 let randomInt = 3
-                Button(action: {isLiked.toggle()}) {
+                Button(action: {isGuest.toggle()}) {
                     
                     
-                    if isLiked == false {
                         HStack{
                             Image(systemName: "suit.heart")
                                 .resizable()
                                 .frame(width: 20, height: 19)
-                            .foregroundColor(.gray)
-                            .font(.body)
+                                .foregroundColor(.gray)
+                                .font(.body)
                             
                         }
                         Text(String(randomInt))
                             .font(.caption)
                             .foregroundColor(Color.gray)
-                    }
-                    else {
-                        HStack{
-                            Image(systemName: "heart.fill")
-                                .resizable()
-                                .frame(width: 20, height: 19)
-                                .foregroundColor(.red)
-                            Text(String(randomInt+1))
-                                .font(.caption)
-                                .foregroundColor(Color.gray)
-                        }
-                    }
+                    
+            
                     
                 }
                 
@@ -324,7 +308,7 @@ struct postsStructure : View{
                         .foregroundColor(.gray)
                     
                 }) .sheet(isPresented: $showCommentsSheet, content: {CommentsView()})
-                    
+                
                 
                 Text("2")
                     .font(.caption)
@@ -332,25 +316,30 @@ struct postsStructure : View{
                 Spacer()
                 
                 Button(action: {
-                    isSaved.toggle()
+                    isGuest.toggle()
                 }){
-                    if(isSaved){
-                    Image(systemName: "bookmark.fill")
-                    .foregroundColor(.black)
-                    }
-                    else {
+                 
                         Image(systemName: "bookmark")
-                        .foregroundColor(.gray)
-                    }
-                    }
-                }.padding()
+                            .foregroundColor(.gray)
+                    
+                }
+            }.padding()
             
             
         }
+        .alert("Important message", isPresented: $isGuest) {
+            Button("Log in") {
+            }
+            Button("Sign up") {
+            }
+            Button("Cancle", role: .cancel) { }
+            
+    
+            }
     }
 }
 
-struct filesStructure :View{
+struct filesStructureGuest :View{
     var date:String
     var fileName:String
     var body: some View{

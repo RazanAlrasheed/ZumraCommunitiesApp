@@ -25,13 +25,13 @@ struct TabBarView: View {
     var body: some View {
         if (user.IsLogin){
             TabView(selection: $selectedTab){
-           CommunitiesUIView()
+           CommunitiesUIView() .environmentObject(user)
                 .tabItem({
                     Image(systemName: "person.3.fill")
                     Text("Communities")
                 })
                 .tag(Tabs.communities)
-               ExploreView()
+               ExploreView() .environmentObject(user)
       .tabItem({
                     Image(systemName: "safari.fill")
                     Text("Explore")
