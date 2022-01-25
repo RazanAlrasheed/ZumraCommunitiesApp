@@ -79,6 +79,8 @@
 		515EB58B27A046090066B1E6 /* LoginUser */ = {
 			isa = PBXGroup;
 			children = (
+				512F29A727A017A1003FD664 /* CommunityPage.swift */,
+				5156336D279EE1A700A87C33 /* CommunitiesUIView.swift */,
 			);
 			path = LoginUser;
 			sourceTree = "<group>";
@@ -104,9 +106,8 @@
 			children = (
 				515EB58B27A046090066B1E6 /* LoginUser */,
 				515EB58A27A045F80066B1E6 /* GuestUser */,
-				516D0C8527983A8200D7B936 /* CommunitiesApp.swift */,
 				516D0C8727983A8200D7B936 /* TabBarView.swift */,
-				5156336D279EE1A700A87C33 /* CommunitiesUIView.swift */,
+				516D0C8527983A8200D7B936 /* CommunitiesApp.swift */,
 				51563367279C795B00A87C33 /* ExploreView.swift */,
 				516D0C9B2799D51B00D7B936 /* SearchView.swift */,
 				516D0C9D2799FA9200D7B936 /* UserProfileView.swift */,
@@ -117,7 +118,6 @@
 				516D0C8927983A8300D7B936 /* Assets.xcassets */,
 				516D0C8B27983A8300D7B936 /* Preview Content */,
 				516D0C992799CBC300D7B936 /* SampleData.swift */,
-				512F29A727A017A1003FD664 /* CommunityPage.swift */,
 				512F29A927A017E8003FD664 /* CommentsModel.swift */,
 				512F29AB27A0180C003FD664 /* GridImageView.swift */,
 				512F29AD27A0183B003FD664 /* ImageView.swift */,
