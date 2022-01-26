@@ -7,6 +7,7 @@
 
 import SwiftUI
 struct CommentsViewGuest:View{
+    @EnvironmentObject var user: User
     @State var textFieldText :String = ""
 //    @State var isPostClicked : Bool = false
     @State var isGuest:Bool=false
@@ -47,8 +48,8 @@ struct CommentsViewGuest:View{
             }
           
             Spacer()
-            NavigationLink("",destination: login(),isActive: $GoLogin)
-            NavigationLink("",destination: Text("Signup"),isActive: $GoSignUp)
+            NavigationLink("",destination: LoginView(),isActive: $GoLogin)
+            NavigationLink("",destination: SignUpView(isLogin:$GoSignUp ).environmentObject(user),isActive: $GoSignUp)
             
         }
      
@@ -69,6 +70,7 @@ struct CommentsViewGuest:View{
 }
 
 struct DummyCommentsModelGuest: View {
+    @EnvironmentObject var user: User
     @State var GoLogin : Bool = false
     @State var GoSignUp : Bool = false
     @State var isGuest: Bool = false
@@ -121,8 +123,8 @@ struct DummyCommentsModelGuest: View {
             }.padding(.horizontal, 16.0)
                 .padding(.top)
 //
-                    NavigationLink("",destination: login(),isActive: $GoLogin)
-                    NavigationLink("",destination: Text("Signup"),isActive: $GoSignUp)
+            NavigationLink("",destination: LoginView().environmentObject(user),isActive: $GoLogin)
+            NavigationLink("",destination: SignUpView(isLogin: $GoLogin).environmentObject(user),isActive: $GoSignUp)
 
 
         }

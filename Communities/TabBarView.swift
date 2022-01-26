@@ -52,7 +52,7 @@ struct TabBarView: View {
         else{
         TabView(selection: $selectedTab){
           
-            GestCommunities()
+            GestCommunities().environmentObject(user)
             
                 .tabItem({
                     Image(systemName: "person.3.fill")
@@ -181,3 +181,4 @@ struct ContentView_Previews: PreviewProvider {
         TabBarView()
     }
 }
+

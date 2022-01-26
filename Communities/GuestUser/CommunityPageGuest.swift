@@ -124,14 +124,14 @@ struct CommunityPageGuest: View {
                     .padding()
                     
                     switch pageMode {
-                    case 0 : PostsPageGuest()
-                    case 1 : MediaPageGuest()
-                    case 2 : FilesPageGuest()
-                    default:PostsPageGuest()
+                    case 0 : PostsPageGuest().environmentObject(user)
+                    case 1 : MediaPageGuest().environmentObject(user)
+                    case 2 : FilesPageGuest().environmentObject(user)
+                    default:PostsPageGuest().environmentObject(user)
                     }
                 }
-                NavigationLink("",destination: login(),isActive: $GoLogin)
-                NavigationLink("",destination: Text("Signup"),isActive: $GoSignUp)
+                NavigationLink("",destination: LoginView().environmentObject(user),isActive: $GoLogin)
+                NavigationLink("",destination: SignUpView(isLogin:$GoSignUp ).environmentObject(user),isActive: $GoSignUp)
             }.navigationBarTitle("\(TitleName)",displayMode: .inline)
             
         }   .alert("You’re not Logged in", isPresented: $isGuest) {
@@ -232,7 +232,7 @@ struct CommunityPageGuest_Previews: PreviewProvider {
 
 
 struct postsStructureGuest : View{
-    
+    @EnvironmentObject var user: User
     @State var isGuest : Bool = false
     @State var showCommentsSheet : Bool = false
   
@@ -315,7 +315,7 @@ struct postsStructureGuest : View{
                         .frame(width: 20, height: 19)
                         .foregroundColor(.gray)
                     
-                }) .sheet(isPresented: $showCommentsSheet, content: {CommentsViewGuest()})
+                }) .sheet(isPresented: $showCommentsSheet, content: {CommentsViewGuest().environmentObject(user)})
                 
                 
                 Text("2")
@@ -335,8 +335,8 @@ struct postsStructureGuest : View{
             
             
         }
-        NavigationLink("",destination: login(),isActive: $GoLogin)
-        NavigationLink("",destination: Text("Signup"),isActive: $GoSignUp)
+        NavigationLink("",destination: LoginView().environmentObject(user),isActive: $GoLogin)
+        NavigationLink("",destination:  SignUpView(isLogin: $GoSignUp).environmentObject(user),isActive: $GoSignUp)
         
         .alert("You’re not Logged in", isPresented: $isGuest) {
            Button("Log in") {

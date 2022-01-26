@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GestCommunities: View {
+    @EnvironmentObject var user: User
     @State var ProfileIsOpen : Bool = false
     @State var GoLogin : Bool = false
     @State private var actionState: Int? = 0
@@ -32,7 +33,10 @@ struct GestCommunities: View {
 //                            LoginView()
 //                        }
 // nav
-                        NavigationLink(destination: LoginView()){
+                        NavigationLink(destination:
+                                        LoginView().environmentObject(user)
+//                                       CreatePostView()
+                        ){
                             Image(systemName: "person.circle.fill")
                                 .font(.largeTitle)
 

@@ -146,7 +146,10 @@ struct CommunityPage: View {
                 }
             }.navigationBarTitle("\(TitleName)",displayMode: .inline)
         }   .overlay(
-            Button(action: {  })
+            NavigationLink(destination:
+//                            LoginView().environmentObject(user)
+                                    CreatePostView(TitleName: "\(TitleName)", imageTitle: "\(imageTitle)")
+            )
             { Image(systemName: "plus")
                     .foregroundColor(.white)
                     .background(Circle()

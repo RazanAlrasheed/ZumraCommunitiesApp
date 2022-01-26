@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-
+    @EnvironmentObject var user: User
     @State private var username = String()
     @State private var password = String()
 
@@ -20,7 +20,7 @@ struct LoginView: View {
     }
 
     var body: some View {
-       
+
             GeometryReader { gr in
                 VStack {
                     ScrollView {
@@ -69,28 +69,32 @@ struct LoginView: View {
                             }
 
                             // Login button
-                            NavigationLink(destination:CommunitiesUIView()){
-                                Text("Login")
-                                    .frame(maxWidth: .infinity)
-                                    .frame(height: 52)
-                                    .font(.system(size: 18, weight: .bold))
-                            } .buttonStyle(OrangeButton())
-                                .padding([.leading, .trailing], 16)
-//                            
-//                            Button {
-//                                isLoggedIn.toggle()
-//                            } label: {
+//                            NavigationLink(destination:CommunitiesUIView()){
 //                                Text("Login")
 //                                    .frame(maxWidth: .infinity)
 //                                    .frame(height: 52)
 //                                    .font(.system(size: 18, weight: .bold))
-//                            }
-//                            .buttonStyle(OrangeButton())
-//                            .padding([.leading, .trailing], 16)
-//                            .fullScreenCover(isPresented: $isLoggedIn) {
-//                                CommunitiesUIView()
-//                            }
-                            
+//                            } .buttonStyle(OrangeButton())
+//                                .padding([.leading, .trailing], 16)
+//
+                            Button {
+                                isLoggedIn.toggle()
+                                user.IsLogin = true
+                            } label: {
+                                Text("Login")
+                                    .frame(maxWidth: .infinity)
+                                    .frame(height: 52)
+                                    .font(.system(size: 18, weight: .bold))
+                            }
+                            .buttonStyle(OrangeButton())
+                            .padding([.leading, .trailing], 16)
+                          
+                              
+                            .fullScreenCover(isPresented: $isLoggedIn) {
+                                
+                                CommunitiesUIView().environmentObject(user)
+                            }
+                        
 
                             Group {
                                 // Other login options
@@ -118,7 +122,7 @@ struct LoginView: View {
                                             .font(.system(size: 15))
                                     }
                                     .fullScreenCover(isPresented: $isSignUp) {
-                                        SignUpView(isLogin: $isSignUp)
+                                        SignUpView(isLogin: $isSignUp).environmentObject(user)
                                     }
                                 }
                             }
@@ -135,6 +139,7 @@ struct LoginView: View {
                     }
                 }
             }
+        
             .ignoresSafeArea()
             .navigationBarHidden(true)
         

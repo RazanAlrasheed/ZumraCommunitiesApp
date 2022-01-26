@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct SignUpView: View {
-
+    @EnvironmentObject var user: User
     @State private var username = String()
     @State private var email = String()
     @State private var password = String()
@@ -117,6 +117,7 @@ struct SignUpView: View {
                     }
                 }
             }
+            .navigationBarBackButtonHidden(true)
             .ignoresSafeArea()
       
     }

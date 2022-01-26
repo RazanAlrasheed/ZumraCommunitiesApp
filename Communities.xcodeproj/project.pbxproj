@@ -33,6 +33,8 @@
 		519CBC5827A189D9006C5743 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CBC5727A189D9006C5743 /* ViewModifiers.swift */; };
 		519CBC5A27A18A3F006C5743 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CBC5927A18A3F006C5743 /* ForgotPasswordView.swift */; };
 		519CBC5C27A18A68006C5743 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CBC5B27A18A68006C5743 /* SignUpView.swift */; };
+		519CBC5E27A1DEAF006C5743 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CBC5D27A1DEAF006C5743 /* AccountView.swift */; };
+		519CBC6027A1E391006C5743 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CBC5F27A1E391006C5743 /* CreatePostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		519CBC5727A189D9006C5743 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		519CBC5927A18A3F006C5743 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		519CBC5B27A18A68006C5743 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		519CBC5D27A1DEAF006C5743 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		519CBC5F27A1E391006C5743 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +119,10 @@
 		516D0C8427983A8200D7B936 /* Communities */ = {
 			isa = PBXGroup;
 			children = (
+				516D0C8527983A8200D7B936 /* CommunitiesApp.swift */,
 				515EB58B27A046090066B1E6 /* LoginUser */,
 				515EB58A27A045F80066B1E6 /* GuestUser */,
 				516D0C8727983A8200D7B936 /* TabBarView.swift */,
-				516D0C8527983A8200D7B936 /* CommunitiesApp.swift */,
 				51563367279C795B00A87C33 /* ExploreView.swift */,
 				516D0C9B2799D51B00D7B936 /* SearchView.swift */,
 				516D0C9D2799FA9200D7B936 /* UserProfileView.swift */,
@@ -137,6 +141,8 @@
 				519CBC5527A18999006C5743 /* OrangeButton.swift */,
 				519CBC5727A189D9006C5743 /* ViewModifiers.swift */,
 				519CBC5927A18A3F006C5743 /* ForgotPasswordView.swift */,
+				519CBC5D27A1DEAF006C5743 /* AccountView.swift */,
+				519CBC5F27A1E391006C5743 /* CreatePostView.swift */,
 			);
 			path = Communities;
 			sourceTree = "<group>";
@@ -230,8 +236,10 @@
 				515EB58727A03A7C0066B1E6 /* CommunityPageGuest.swift in Sources */,
 				512F29B027A01875003FD664 /* ViewModel.swift in Sources */,
 				519CBC5827A189D9006C5743 /* ViewModifiers.swift in Sources */,
+				519CBC6027A1E391006C5743 /* CreatePostView.swift in Sources */,
 				5156336E279EE1A700A87C33 /* CommunitiesUIView.swift in Sources */,
 				519CBC5627A18999006C5743 /* OrangeButton.swift in Sources */,
+				519CBC5E27A1DEAF006C5743 /* AccountView.swift in Sources */,
 				515EB58927A0423B0066B1E6 /* CommentsViewGuest.swift in Sources */,
 				519CBC5A27A18A3F006C5743 /* ForgotPasswordView.swift in Sources */,
 				51563366279C355500A87C33 /* EditMyProfileView.swift in Sources */,

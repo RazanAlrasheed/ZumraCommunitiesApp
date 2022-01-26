@@ -14,7 +14,7 @@ struct CommunitiesUIView: View {
     @EnvironmentObject var user: User
     
     var body: some View{
-    
+        NavigationView{
          ScrollView(.vertical , showsIndicators: false){
         VStack {
             HStack(alignment: .bottom){
@@ -33,7 +33,7 @@ struct CommunitiesUIView: View {
             .padding()
             Divider().padding(.horizontal)
             
-            titleOf(title: "My communities")
+            titleOf(title: "My communities").environmentObject(user)
             
              ScrollView(.horizontal , showsIndicators: false){
                HStack{
@@ -48,7 +48,7 @@ struct CommunitiesUIView: View {
                         ForEach(keys.indices) { index in
                       
                             NavigationLink(
-                                destination: CommunityPage(TitleName: "\(values[index])", imageTitle: "\(values[index])")){
+                                destination: CommunityPage(TitleName: "\(values[index])", imageTitle: "\(values[index])").environmentObject(user)){
                                     VStack(alignment: .leading){
                                         ZStack{
                                             Image("\(values[index])")
@@ -83,12 +83,14 @@ struct CommunitiesUIView: View {
                 Spacer()
             }
             Divider()
-            PostsPage()
+            PostsPage().environmentObject(user)
             Spacer()
          }
          }
          .navigationBarHidden(true)
-         .navigationTitle("Communities")
+        }
+//         .navigationBarHidden(true)
+//         .navigationTitle("Communities")
        
      .sheet(isPresented: $ProfileIsOpen, content: {
          MyProfileView()
@@ -103,9 +105,10 @@ struct CommunitiesUIView_Previews: PreviewProvider {
 }
 
 struct ExtractedView: View {
+    @EnvironmentObject var user: User
     var body: some View {
         VStack {
-            NavigationLink(destination: Text("Create community")){
+            NavigationLink(destination: Text("Create community").environmentObject(user)){
                 ZStack{
                     Rectangle()
                         .fill(Color.init(red: 316.0, green: 316.0, blue: 250.0))

@@ -24,7 +24,7 @@ struct seeAllView: View {
                         if(title != "Top Search Category"){
                             if user.IsLogin {
                                 NavigationLink(
-                                    destination: CommunityPage(TitleName: "\(values[index])", imageTitle: "\(values[index])")){
+                                    destination: CommunityPage(TitleName: "\(values[index])", imageTitle: "\(values[index])").environmentObject(user)){
                                         VStack(alignment: .leading){
                                             ZStack{
                                                 Image("\(values[index])")
@@ -48,7 +48,7 @@ struct seeAllView: View {
                                  }
                             }else{
                                 NavigationLink(
-                                    destination: CommunityPageGuest(TitleName: "\(values[index])", imageTitle: "\(values[index])")){
+                                    destination: CommunityPageGuest(TitleName: "\(values[index])", imageTitle: "\(values[index])").environmentObject(user)){
                                         VStack(alignment: .leading){
                                             ZStack{
                                                 Image("\(values[index])")
