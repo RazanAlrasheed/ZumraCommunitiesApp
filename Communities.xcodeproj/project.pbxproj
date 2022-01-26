@@ -28,6 +28,11 @@
 		516D0C9C2799D51B00D7B936 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C9B2799D51B00D7B936 /* SearchView.swift */; };
 		516D0C9E2799FA9200D7B936 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C9D2799FA9200D7B936 /* UserProfileView.swift */; };
 		516D0CA0279BF6E700D7B936 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D0C9F279BF6E700D7B936 /* MyProfileView.swift */; };
+		519CBC5427A18962006C5743 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CBC5327A18962006C5743 /* LoginView.swift */; };
+		519CBC5627A18999006C5743 /* OrangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CBC5527A18999006C5743 /* OrangeButton.swift */; };
+		519CBC5827A189D9006C5743 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CBC5727A189D9006C5743 /* ViewModifiers.swift */; };
+		519CBC5A27A18A3F006C5743 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CBC5927A18A3F006C5743 /* ForgotPasswordView.swift */; };
+		519CBC5C27A18A68006C5743 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CBC5B27A18A68006C5743 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,11 @@
 		516D0C9B2799D51B00D7B936 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		516D0C9D2799FA9200D7B936 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		516D0C9F279BF6E700D7B936 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
+		519CBC5327A18962006C5743 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		519CBC5527A18999006C5743 /* OrangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeButton.swift; sourceTree = "<group>"; };
+		519CBC5727A189D9006C5743 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		519CBC5927A18A3F006C5743 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		519CBC5B27A18A68006C5743 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,7 @@
 		516D0C7927983A8200D7B936 = {
 			isa = PBXGroup;
 			children = (
+				519CBC5B27A18A68006C5743 /* SignUpView.swift */,
 				516D0C8427983A8200D7B936 /* Communities */,
 				516D0C8327983A8200D7B936 /* Products */,
 			);
@@ -122,6 +133,10 @@
 				512F29AB27A0180C003FD664 /* GridImageView.swift */,
 				512F29AD27A0183B003FD664 /* ImageView.swift */,
 				512F29AF27A01875003FD664 /* ViewModel.swift */,
+				519CBC5327A18962006C5743 /* LoginView.swift */,
+				519CBC5527A18999006C5743 /* OrangeButton.swift */,
+				519CBC5727A189D9006C5743 /* ViewModifiers.swift */,
+				519CBC5927A18A3F006C5743 /* ForgotPasswordView.swift */,
 			);
 			path = Communities;
 			sourceTree = "<group>";
@@ -210,17 +225,22 @@
 				516D0C8827983A8200D7B936 /* TabBarView.swift in Sources */,
 				51563368279C795B00A87C33 /* ExploreView.swift in Sources */,
 				512F29AA27A017E8003FD664 /* CommentsModel.swift in Sources */,
+				519CBC5C27A18A68006C5743 /* SignUpView.swift in Sources */,
 				516D0C9E2799FA9200D7B936 /* UserProfileView.swift in Sources */,
 				515EB58727A03A7C0066B1E6 /* CommunityPageGuest.swift in Sources */,
 				512F29B027A01875003FD664 /* ViewModel.swift in Sources */,
+				519CBC5827A189D9006C5743 /* ViewModifiers.swift in Sources */,
 				5156336E279EE1A700A87C33 /* CommunitiesUIView.swift in Sources */,
+				519CBC5627A18999006C5743 /* OrangeButton.swift in Sources */,
 				515EB58927A0423B0066B1E6 /* CommentsViewGuest.swift in Sources */,
+				519CBC5A27A18A3F006C5743 /* ForgotPasswordView.swift in Sources */,
 				51563366279C355500A87C33 /* EditMyProfileView.swift in Sources */,
 				516D0C8627983A8200D7B936 /* CommunitiesApp.swift in Sources */,
 				516D0C9A2799CBC300D7B936 /* SampleData.swift in Sources */,
 				5156336A279D617C00A87C33 /* seeAllView.swift in Sources */,
 				512F29AC27A0180C003FD664 /* GridImageView.swift in Sources */,
 				516D0CA0279BF6E700D7B936 /* MyProfileView.swift in Sources */,
+				519CBC5427A18962006C5743 /* LoginView.swift in Sources */,
 				516D0C9C2799D51B00D7B936 /* SearchView.swift in Sources */,
 				516D0C96279878F500D7B936 /* GestCommunities.swift in Sources */,
 			);

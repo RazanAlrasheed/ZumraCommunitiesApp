@@ -15,7 +15,7 @@ class User : ObservableObject {
 }
 @main
 struct CommunitiesApp: App {
-    @StateObject var user = User(IsLogin: true )
+    @StateObject var user = User(IsLogin: false )
   
     var body: some Scene {
         WindowGroup {

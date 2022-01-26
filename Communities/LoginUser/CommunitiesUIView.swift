@@ -12,8 +12,9 @@ struct CommunitiesUIView: View {
     let values = TopCommunitiesList.map{$0.value}
     @State var ProfileIsOpen : Bool = false
     @EnvironmentObject var user: User
+    
     var body: some View{
-     NavigationView {
+    
          ScrollView(.vertical , showsIndicators: false){
         VStack {
             HStack(alignment: .bottom){
@@ -88,7 +89,7 @@ struct CommunitiesUIView: View {
          }
          .navigationBarHidden(true)
          .navigationTitle("Communities")
-       }
+       
      .sheet(isPresented: $ProfileIsOpen, content: {
          MyProfileView()
      })

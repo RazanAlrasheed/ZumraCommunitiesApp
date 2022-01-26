@@ -15,7 +15,6 @@ struct UserProfileView: View {
     }
     @State private var selectedSection = 0
     var body: some View {
-        NavigationView{
         ScrollView {
                     ZStack {
 //                        // Bottom Layer
@@ -95,7 +94,7 @@ struct UserProfileView: View {
         .navigationTitle("My profile")
         .navigationBarTitleDisplayMode(.inline)
         .edgesIgnoringSafeArea(.vertical)
-        }
+        
     }
     }
 

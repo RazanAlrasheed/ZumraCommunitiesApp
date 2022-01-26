@@ -20,7 +20,8 @@ struct CommunityPageGuest: View {
     }
     @State private var pageMode = 0
     @State var isGuest : Bool=false
-    
+    @State var GoLogin : Bool=false
+    @State var GoSignUp : Bool=false
     var body: some View {
         ScrollView(showsIndicators: false){
             VStack{
@@ -71,7 +72,9 @@ struct CommunityPageGuest: View {
                         //                        .multilineTextAlignment(.leading)
                         
                         HStack(spacing:70){
-                            Button(action:  {isGuest.toggle()}) {
+                            Button(action:  {isGuest.toggle()
+                                
+                            }) {
                               
                                     Image(systemName: "person.crop.circle.badge.plus")
                                         .foregroundColor(.white)
@@ -127,12 +130,16 @@ struct CommunityPageGuest: View {
                     default:PostsPageGuest()
                     }
                 }
+                NavigationLink("",destination: login(),isActive: $GoLogin)
+                NavigationLink("",destination: Text("Signup"),isActive: $GoSignUp)
             }.navigationBarTitle("\(TitleName)",displayMode: .inline)
             
         }   .alert("You’re not Logged in", isPresented: $isGuest) {
             Button("Log in") {
+                GoLogin = true
             }
             Button("Sign up") {
+                GoSignUp = true
             }
             Button("Cancle", role: .cancel) { }
             
@@ -233,7 +240,8 @@ struct postsStructureGuest : View{
     var ImageName : String
     var post : String
     var postImage:String?
-    
+    @State var GoLogin : Bool=false
+    @State var GoSignUp : Bool=false
     
     
     var body: some View{
@@ -327,10 +335,15 @@ struct postsStructureGuest : View{
             
             
         }
+        NavigationLink("",destination: login(),isActive: $GoLogin)
+        NavigationLink("",destination: Text("Signup"),isActive: $GoSignUp)
+        
         .alert("You’re not Logged in", isPresented: $isGuest) {
            Button("Log in") {
+               GoLogin = true
            }
            Button("Sign up") {
+               GoSignUp = true
            }
            Button("Cancle", role: .cancel) { }
             

@@ -11,6 +11,8 @@ struct CommentsViewGuest:View{
 //    @State var isPostClicked : Bool = false
     @State var isGuest:Bool=false
     @State var commentsArray:[String]=[]
+    @State var GoLogin : Bool=false
+    @State var GoSignUp : Bool=false
   
     var body: some View{
         
@@ -45,30 +47,36 @@ struct CommentsViewGuest:View{
             }
           
             Spacer()
-         
+            NavigationLink("",destination: login(),isActive: $GoLogin)
+            NavigationLink("",destination: Text("Signup"),isActive: $GoSignUp)
+            
         }
-        
-        .alert("You’re not Logged in", isPresented: $isGuest) {
-           Button("Log in") {
-           }
-           Button("Sign up") {
-           }
-           Button("Cancle", role: .cancel) { }
-           
-   
-           }
+     
+//        .alert("You’re not Logged in", isPresented: $isGuest) {
+//           Button("Log in") {
+//               GoLogin = true
+//           }
+//           Button("Sign up") {
+//               GoSignUp = true
+//           }
+//           Button("Cancle", role: .cancel) { }
+//
+//
+//           }
     }
      
  
 }
 
 struct DummyCommentsModelGuest: View {
+    @State var GoLogin : Bool = false
+    @State var GoSignUp : Bool = false
     @State var isGuest: Bool = false
     var userName:String
     var profilePic:String
     var comment:String
     var body: some View {
-        
+ 
         VStack{
            
 //            Spacer()
@@ -112,18 +120,23 @@ struct DummyCommentsModelGuest: View {
            
             }.padding(.horizontal, 16.0)
                 .padding(.top)
-                
-            
-            
+//
+                    NavigationLink("",destination: login(),isActive: $GoLogin)
+                    NavigationLink("",destination: Text("Signup"),isActive: $GoSignUp)
+
+
         }
+
         .alert("You’re not Logged in", isPresented: $isGuest) {
            Button("Log in") {
+               GoLogin = true
            }
            Button("Sign up") {
+               GoSignUp = true
            }
            Button("Cancle", role: .cancel) { }
-           
-   
+
+
            }
     }
 }

@@ -15,7 +15,7 @@ struct MyProfileView: View {
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
     }
     var body: some View {
-        NavigationView{
+       
         ScrollView {
                     ZStack {
 //                        // Bottom Layer
@@ -95,7 +95,7 @@ struct MyProfileView: View {
         .navigationTitle("My profile")
         .navigationBarTitleDisplayMode(.inline)
         .edgesIgnoringSafeArea(.vertical)
-        }
+        
     }
 }
 

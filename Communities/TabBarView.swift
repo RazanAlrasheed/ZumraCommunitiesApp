@@ -23,6 +23,7 @@ struct TabBarView: View {
     @State var selectedTab : Tabs = .communities
    
     var body: some View {
+//        NavigationView{
         if (user.IsLogin){
             TabView(selection: $selectedTab){
            CommunitiesUIView() .environmentObject(user)
@@ -50,7 +51,9 @@ struct TabBarView: View {
         }
         else{
         TabView(selection: $selectedTab){
+          
             GestCommunities()
+            
                 .tabItem({
                     Image(systemName: "person.3.fill")
                     Text("Communities")
@@ -169,6 +172,7 @@ struct TabBarView: View {
                     })
         }
        
+//    }
     }
 }
 

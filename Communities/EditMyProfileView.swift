@@ -13,7 +13,7 @@ struct EditMyProfileView: View {
     @State var Email: String = ""
     @State var Location: String = ""
     var body: some View {
-        NavigationView{
+      
             VStack( spacing: 15.0){
                 ZStack(alignment: .bottomTrailing){
                     Button(action: {
@@ -50,7 +50,7 @@ struct EditMyProfileView: View {
                        .frame(width: 343.0, height: 50, alignment: .leading)
                        Spacer()
             }
-        }.navigationTitle("Edit Profile")
+        .navigationTitle("Edit Profile")
             .navigationBarItems(trailing:
                                 Text("Done").foregroundColor(Color.accentColor)
                       )
