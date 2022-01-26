@@ -69,19 +69,27 @@ struct LoginView: View {
                             }
 
                             // Login button
-                            Button {
-                                isLoggedIn.toggle()
-                            } label: {
+                            NavigationLink(destination:CommunitiesUIView()){
                                 Text("Login")
                                     .frame(maxWidth: .infinity)
                                     .frame(height: 52)
                                     .font(.system(size: 18, weight: .bold))
-                            }
-                            .buttonStyle(OrangeButton())
-                            .padding([.leading, .trailing], 16)
-                            .fullScreenCover(isPresented: $isLoggedIn) {
-                                CommunitiesUIView()
-                            }
+                            } .buttonStyle(OrangeButton())
+                                .padding([.leading, .trailing], 16)
+//                            
+//                            Button {
+//                                isLoggedIn.toggle()
+//                            } label: {
+//                                Text("Login")
+//                                    .frame(maxWidth: .infinity)
+//                                    .frame(height: 52)
+//                                    .font(.system(size: 18, weight: .bold))
+//                            }
+//                            .buttonStyle(OrangeButton())
+//                            .padding([.leading, .trailing], 16)
+//                            .fullScreenCover(isPresented: $isLoggedIn) {
+//                                CommunitiesUIView()
+//                            }
                             
 
                             Group {
