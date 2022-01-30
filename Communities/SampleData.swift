@@ -69,3 +69,27 @@ public var MyCommunitiesList = [
     "Food" : "Cook and Cookers"
 
 ]
+
+//public var AllCommunitiesForCategory : [String:[String]] = [
+
+public var TV_Film = ["The Alliance" , "Squad Game Club" ]
+public var Game = ["OverWatch" ,  "Crafters"]
+public var Travel = [ "Riyadh City" , "Travel Community"]
+
+//    "Game" : ["OverWatch" ,  "Crafters"],
+//    "Sport" : [ ],
+//    "Art" : [ ],
+//    "Music" : [ ],
+//    "Technology" : ["App Monsters" ],
+//    "Travel" : [ "Riyadh City" , "Travel Community"] ,
+//    "Book" : [ "OverBooked!"],
+//    "Craft" : [ ],
+//    "Food" : [ "Cook and Cookers"],
+//    "Fitness" : [ "Fab & Fit & Fun"],
+//    "Photography" : [ ],
+//    "Shop" : [ ],
+//    "Education" : [ ]
+
+
+
+//]

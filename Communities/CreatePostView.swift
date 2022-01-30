@@ -9,7 +9,8 @@ import SwiftUI
 
 struct CreatePostView: View {
     
-    
+    @Environment(\.presentationMode) private var presentationMode : Binding<PresentationMode>
+
     @State private var texts: String = ""
 //  @State var textEditiorText : String = "Share Something with us..."
     @State var showSheet: Bool = false
@@ -38,6 +39,7 @@ struct CreatePostView: View {
                     .navigationBarTitleDisplayMode(.inline)
                     .navigationBarBackButtonHidden(true)
                     .navigationBarItems(leading: Button(action: {
+                        presentationMode.wrappedValue.dismiss()
                        GoCancle = true
                     }, label: {
                         Text("Cancel")

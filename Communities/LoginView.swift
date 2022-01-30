@@ -17,6 +17,7 @@ struct LoginView: View {
     @State var uiTabarController: UITabBarController?
     init() {
         UIScrollView.appearance().bounces = false
+        
     }
 
     var body: some View {
@@ -68,7 +69,7 @@ struct LoginView: View {
                                 }
                             }
 
-                            // Login button
+//                             Login button
 //                            NavigationLink(destination:CommunitiesUIView()){
 //                                Text("Login")
 //                                    .frame(maxWidth: .infinity)
@@ -76,9 +77,9 @@ struct LoginView: View {
 //                                    .font(.system(size: 18, weight: .bold))
 //                            } .buttonStyle(OrangeButton())
 //                                .padding([.leading, .trailing], 16)
-//
+
                             Button {
-                                isLoggedIn.toggle()
+//                                isLoggedIn.toggle()
                                 user.IsLogin = true
                             } label: {
                                 Text("Login")
@@ -88,10 +89,10 @@ struct LoginView: View {
                             }
                             .buttonStyle(OrangeButton())
                             .padding([.leading, .trailing], 16)
-                          
-                              
-                            .fullScreenCover(isPresented: $isLoggedIn) {
-                                
+
+
+                            .fullScreenCover(isPresented: $user.IsLogin) {
+
                                 CommunitiesUIView().environmentObject(user)
                             }
                         

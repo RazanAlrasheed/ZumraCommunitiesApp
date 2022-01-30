@@ -9,184 +9,78 @@ import SwiftUI
 
 struct AccountView: View {
     var body: some View {
-            ScrollView{
-  
-                Divider().padding([.top,.leading,.trailing])
-                
-                
-                VStack(spacing: 5.0){
-                    
-                    
-                    
-                    Group{
-                        HStack{
-                            
-                            VStack(alignment: .leading){
-                                Text("Account")
-                                
-                                
-                                    .padding(.top, 2.0)
-                                
-                                    .frame(width: /*@START_MENU_TOKEN@*/nil, height: 26.0/*@END_MENU_TOKEN@*/)
-                                    .font(.headline)
-                                
-                                    .background(Color(hue: 1.0, saturation: 0.01, brightness: 0.828))
-                                //                                      .listRowBackground(Color.gray)
-                                
-                                
-                            }
-                            Spacer()
-                            VStack{
-                                
-                            }
-                        }
-                        Divider()
+        NavigationView{
+        Form{
+            Section(header:Text("Account").fontWeight(.semibold).foregroundColor(.black)){
+                NavigationLink(destination: MyProfileView()){
+                HStack{
+                    VStack(alignment: .leading){
+                        
+                        Text("Nora Salem")
+                        Text("@nora_33")
+                            .font(.caption)
+                            .foregroundColor(Color.gray)
                     }
-                    
-                    Group{
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Nora Salem")
-                                Text("@noura_31")
-                                    .font(.caption2)
-                                    .foregroundColor(.gray)
-                            }
-                            Spacer()
-                            VStack{
-                                Image(systemName:"chevron.right")
-                                
-                            }
-                        }
-                        Divider()
+                    Spacer()
+//                    Image(systemName: "chevron.right")
+//                        .foregroundColor(Color.gray)
+//                }.padding(.vertical, 4.0)
+                }}
+                NavigationLink(destination: ChatView()){
+                HStack{
+                    VStack(alignment: .leading){
+                        
+                        Text("Chats")
+                   
                     }
-                    Group{
-                        HStack{
-                            NavigationLink(destination:Text("message")){
-                                
-                                VStack(alignment: .leading){
-                                    Text("Chats")
-                                }
-                                Spacer()
-                                VStack{
-                                    Image(systemName:"chevron.right")
-                                }
-                            }
-                        }
-                        Divider()
-                    }
-                    
-                    
-                    
-                    
-                    
-                    Group{
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Notifications ")
-                            }
-                            Spacer()
-                            VStack{
-                                Image(systemName:"chevron.right")
-                            }
-                        }
-                        Divider()
-                    }
-                    Group{
-                        HStack{
-                            VStack(alignment: .leading){
-                                
-                                
-                                Text("Sittings")
-                                    .padding(.top, 2.0)
-                                    .frame(width: nil, height: 24.0)
-                                    .background(Color(hue: 1.0, saturation: 0.01, brightness: 0.828))
-                                
-                                
-                            }
-                            Spacer()
-                            VStack{
-                                
-                            }
-                        }
-                        Divider()
-                    }
-                    Group{
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Privacy and Security  ")
-                            }
-                            Spacer()
-                            VStack{
-                                Image(systemName:"chevron.right")
-                            }
-                        }
-                        Divider()
-                    }
-                    Group{
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Help")
-                            }
-                            Spacer()
-                            VStack{
-                                Image(systemName:"chevron.right")
-                            }
-                        }
-                        Divider()
-                    }
-                    Group{
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("About")
-                            }
-                            Spacer()
-                            VStack{
-                                Image(systemName:"chevron.right")
-                            }
-                        }
-                        Divider()
-                    }
-                    Group{
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("")
-                                    .frame(height: 26.0)
-                            }
-                            Spacer()
-                            VStack{
-                            }
-                        }
-                        Divider()
-                    }
-                    Group{
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Sign Out")
-                                    .multilineTextAlignment(.center)
-                                    .foregroundColor(Color.red)
-                                
-                                
-                                
-                            }
-                            
-                            Divider()
-                        }
-                    }
-                    
+                    Spacer()
+//                    Image(systemName: "chevron.right")
+//                        .foregroundColor(Color.gray)
+//                }.padding(.vertical, 4.0)
+                }}
+//                HStack{Text("Chats")
+//                    Spacer()
+//                    Image(systemName: "chevron.right")
+//                        .foregroundColor(Color.gray)
+//                }
+                HStack{Text("Notifications")
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color.gray)
                 }
-                
-                
-                
-                
-                .navigationTitle("Account")
-                .navigationBarTitleDisplayMode(.inline)
-                Divider()
-                
-                
-                
-            }
             
+            }
+            Section(header:Text("Settings").fontWeight(.semibold).foregroundColor(.black)){
+                HStack{
+             Text("Privacy and Security")
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color.gray)
+                }
+                HStack{Text("Help")
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color.gray)
+                }
+                HStack{Text("About")
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color.gray)
+                }
+            }
+            Section{Text("Sign Out")
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color.red)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 300.0)
+            }
         }
+//        .navigationBarHidden(true)
+        .navigationTitle("Account")
+        .navigationBarTitleDisplayMode(.inline)
+        
+        }
+    }
 }
 
 struct AccountView_Previews: PreviewProvider {

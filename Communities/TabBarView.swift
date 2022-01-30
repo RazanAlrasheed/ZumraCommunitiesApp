@@ -77,7 +77,7 @@ struct TabBarView: View {
                 
             }
             .sheet(isPresented: $isFirstLaunch, content: {
-                        VStack {
+                VStack{
                             Text("Welcome to zumra")
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
@@ -86,25 +86,25 @@ struct TabBarView: View {
                                 Image(systemName: "person.3.fill")
                                     .resizable()
                                     .foregroundColor(Color("AccentColor"))
-                                    .frame(width: 51 , height: 24)
+                                    .frame(width: 45 , height: 24)
                                     .padding()
-                                
+
                                 VStack(alignment: .leading){
                                     Text("Communities")
                                         .font(.title2)
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.leading)
                                         .padding(.bottom, 2.0)
-                                        
+
                                     Text("Find people that share the same interest as you in a community.")
                                         .font(.body)
                                         .foregroundColor(Color.gray)
                                         .multilineTextAlignment(.leading)
                                         .padding(.bottom, 2.0)
                                         .frame(width:250)
-                                    
+
                                 }
-                                
+
                             }.padding()
                             HStack{
                                 Image(systemName:"wand.and.stars.inverse")
@@ -112,23 +112,23 @@ struct TabBarView: View {
                                     .foregroundColor(Color("AccentColor"))
                                     .frame(width: 31 , height: 31)
                                     .padding()
-                                
+
                                 VStack(alignment: .leading){
                                     Text("Inspiration")
                                         .font(.title2)
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.leading)
                                         .padding(.bottom, 2.0)
-                                        
+
                                     Text("Get inspired by others experience and increase your passion.")
                                         .font(.body)
                                         .foregroundColor(Color.gray)
                                         .multilineTextAlignment(.leading)
                                         .padding(.bottom, 2.0)
                                         .frame(width:250)
-                                    
+
                                 }
-                                
+
                             }.padding()
                             HStack{
                                 Image(systemName: "safari.fill")
@@ -136,28 +136,28 @@ struct TabBarView: View {
                                     .foregroundColor(Color("AccentColor"))
                                     .frame(width: 29 , height: 29)
                                     .padding()
-                                
+
                                 VStack(alignment: .leading){
                                     Text("Explore")
                                         .font(.title2)
                                         .fontWeight(.semibold)
                                         .multilineTextAlignment(.leading)
                                         .padding(.bottom, 2.0)
-                                        
+
                                     Text("Browse for the newest and the most popular communities.")
                                         .font(.body)
                                         .foregroundColor(Color.gray)
                                         .multilineTextAlignment(.leading)
                                         .padding(.bottom, 2.0)
                                         .frame(width:250)
-                                    
+
                                 }
-                                
+
                             }.padding()
-                            
+
                             Button {
                                  isFirstLaunch = false
-                            
+
                             } label: {
                                 Text("Continue")
                                     .fontWeight(.bold)
@@ -165,10 +165,13 @@ struct TabBarView: View {
                                     .foregroundColor(.white)
                                     .background(Color("AccentColor"))
                                     .cornerRadius(8)
-                                    
+
                             }
-                            
+
                         }
+                
+                
+               
                     })
         }
        

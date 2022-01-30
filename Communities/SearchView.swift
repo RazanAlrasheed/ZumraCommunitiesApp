@@ -22,8 +22,9 @@ struct SearchView: View {
                     .frame(width: 355, alignment: .leading)
                 LazyVGrid(columns: columns){
                     ForEach(Categories ,id: \.self){ index in
-                        NavigationLink(
-                            destination: Text("\(index)")){
+                        if index == "TV & FILMS"{
+                        }
+                            NavigationLink(destination: SALView(AllCommunitiesForCategory: TV_Film, communityName: "\(index)", communityImage: "\(index)")){
                                 ZStack(alignment: .bottom){
                                     Image("\(index)")
                                          .resizable()
@@ -37,13 +38,14 @@ struct SearchView: View {
                                          .padding(.all)
                                          .frame(width: 175 , alignment:.bottomLeading)
                             }
-                            
-                        }
                     }
-                }
+                            
+                        
+                    }
+                }  .searchable(text: $SearchText, placement:.navigationBarDrawer(displayMode: .always))
             }
             .navigationBarTitle("Search", displayMode: .large)
-            .searchable(text: $SearchText, placement:.navigationBarDrawer(displayMode: .always))
+          
         }
     }
     var Categories : [String] {
